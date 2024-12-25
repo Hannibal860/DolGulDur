@@ -1,3 +1,4 @@
+// переменные
 const {src, dest, watch, parallel, series} = require('gulp');
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
@@ -9,7 +10,9 @@ const rename = require('gulp-rename');
 
 
 function scripts() {
-  return src('app/js/main.js')
+  return src([
+    'app/js/main.js'
+  ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js'))
@@ -19,7 +22,7 @@ function scripts() {
 function styles() {
   return src('app/scss/style.scss')
   .pipe(scss({ outputStyle: 'compressed' }))
-  .pipe(rename({ suffix: 'min' }))
+  .pipe(rename({ suffix: '.min' }))
   .pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"], grid: true }))
   .pipe(dest('app/css'))
   .pipe(browserSync.stream())
@@ -27,17 +30,18 @@ function styles() {
 
 
 function watching() {
-  watch(['app/scss/style.scss'], styles)
-  watch(['app/js/main.js'], scripts) 
-  watch(['app/*.html']).on('change', browserSync.reload)
+  watch(['app/scss/**.*.scss'], styles);
+  watch(['app/js/**/*.js', '!app/js/main/min.js'], scripts);
+  watch(['app/*.html']).on('change', browserSync.reload);
 }
 
 function browsersync() {
   browserSync.init({
     server: {
       baseDir: "app/"
-    }
-  });
+    },
+    notify: false
+  })
 }
 
 function cleanDist() {
@@ -45,6 +49,7 @@ function cleanDist() {
   .pipe(clean())
 }
 
+// экспорты и вызовы
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watching = watching;
