@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DolGulDur</title>
+  <title>Web studio DolGulDur</title>
   <link rel="icon" href="images/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
     <div class="header__container container">
       <nav class="menu">
         <a class="logo" href="#">
-          <img class="logo__img" src="./images/logo.svg" alt="logo" width="189" height="36">
+          <img class="logo__img" src="./images/logo.svg" alt="logo DolGulDur" width="189" height="36">
         </a>
         <ul class="menu__list">
           <li class="menu__item">
@@ -32,153 +32,164 @@
           </li>
         </ul>
       </nav>
-      <address class="contacts-header">
-        <ul class="contacts-header__list">
-          <li class="contacts-header__item">
-            <a class="contacts-header__link contacts-header__link--mail" href="mailto: info@gmail.com">
-              info@dolguldur.com
-            </a>
-          </li>
-          <li class="contacts-header__item">
-            <a class="contacts-header__link contacts-header__link--phone" href="tel: +380961111111">
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
-      </address>
+      <ul class="header__contacts header__contacts__list">
+        <li class="header__contacts__item">
+          <a class="header__contacts__link header__contacts__link--mail" href="mailto:info@gmail.com">
+            info@dolguldur.com
+          </a>
+        </li>
+        <li class="header__contacts__item">
+          <a class="header__contacts__link header__contacts__link--phone" href="tel:+380961111111">
+            +38 096 111 11 11
+          </a>
+        </li>
+      </ul>
     </div>
   </header>
 
-  <section class="hero section">
-    <div class="container">
-      <h1 class="hero__title">
-        author's forge where your sites are created
-      </h1>
-      <button class="button" type="button">
-        Go to order
-      </button>
-    </div>
-  </section>
+  <main class="main">
+    <section class="hero section">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            author's forge where your sites are created
+          </h1>
+          <button class="button" type="button">
+            Go to order
+          </button>
+        </div>
+      </div>
+    </section>
 
-  <section class="qualities section">
-    <h2 class="sr-only">
-      Our qualities
-    </h2>
-    <div class="container">
-      <ul class="qualities__list">
-        <li class="qualities__item">
-          <h3 class="qualities__subtitle">
-            Effective team
-          </h3>
-          <p class="qualities__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-          </p>
-        </li>
-        <li class="qualities__item">
-          <h3 class="qualities__subtitle">
-            punctuality
-          </h3>
-          <p class="qualities__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-          </p>
-        </li>
-        <li class="qualities__item">
-          <h3 class="qualities__subtitle">
-            planning
-          </h3>
-          <p class="qualities__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-          </p>
-        </li>
-        <li class="qualities__item">
-          <h3 class="qualities__subtitle">
-            innovation
-          </h3>
-          <p class="qualities__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-          </p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="services section">
-    <div class="container">
-      <h2 class="subtitle">
-        Our services
+    <section class="qualities section">
+      <h2 class="sr-only">
+        Our qualities
       </h2>
-      <ul class="services__list">
-        <li class="services__item services__item--desktop">
-          <img src="images/desktop-apps.webp" class="services__image alt="desktop apps" " width=" 370" height="294">
-        </li>
-        <li class="services__item services__item--mobile">
-          <img src="images/mobile-apps.webp" class="services__image alt="mobile apps" width="370" height="294">
-        </li>
-        <li class="services__item services__item--design">
-          <img src="images/modern-design.webp" class="services__image alt="modern design" width="370" height="294">
-        </li>
-      </ul>
-    </div>
-  </section>
+      <div class="container">
+        <ul class="qualities__list">
+          <li class="qualities__item">
+            <h3 class="qualities__subtitle">
+              Effective team
+            </h3>
+            <p class="qualities__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            </p>
+          </li>
+          <li class="qualities__item">
+            <h3 class="qualities__subtitle">
+              punctuality
+            </h3>
+            <p class="qualities__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            </p>
+          </li>
+          <li class="qualities__item">
+            <h3 class="qualities__subtitle">
+              planning
+            </h3>
+            <p class="qualities__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            </p>
+          </li>
+          <li class="qualities__item">
+            <h3 class="qualities__subtitle">
+              innovation
+            </h3>
+            <p class="qualities__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-  <section class="team section">
-    <div class="container">
-      <h2 class="subtitle">
-        Our team
-      </h2>
-      <ul class="team__list">
-        <li class="team__item">
-          <figcaption class="team__caption">
-            <img class="team__photo" src="images/Paul.webp" alt="Paul Castanie" width="270" height="260">
-            <p class="team__text--name">
-              Paul Castanie
-            </p>
-            <p class="team__text--position">
-              Product Designer
-            </p>
-          </figcaption>
-        </li>
-        <li class="team__item">
-          <figcaption class="team__caption">
-            <img class="team__photo" src="images/Joanna.webp" alt="Joanna Nix" width="270" height="260">
-            <p class="team__text--name">
-              Joanna Nix
-            </p>
-            <p class="team__text--position">
-              Frontend Developer
-            </p>
-          </figcaption>
-        </li>
-        <li class="team__item">
-          <figcaption class="team__caption">
-            <img class="team__photo" src="images/Aldo.webp" alt="Aldo Delara" width="270" height="260">
-            <p class="team__text--name">
-              Aldo Delara
-            </p>
-            <p class="team__text--position">
-              Marketing
-            </p>
-          </figcaption>
-        </li>
-        <li class="team__item">
-          <figcaption class="team__caption">
-            <img class="team__photo" src="images/Oladmeji.webp" alt="Oladimeji Odunsi" width="270" height="260">
-            <p class="team__text--name">
-              Oladimeji Odunsi
-            </p>
-            <p class="team__text--position">
-              UI Designer
-            </p>
-          </figcaption>
-        </li>
-      </ul>
-    </div>
-  </section>
-  
+    <section class="services section">
+      <div class="container">
+        <h2 class="subtitle">
+          Our services
+        </h2>
+        <ul class="services__list">
+          <li class="services__item services__item--desktop">
+            <img src="images/desktop-apps.jpg" class="services__image" alt="desktop apps" width="370" height="294">
+            <h3 class="services__subtitle">
+              desktop apps
+            </h3>
+          </li>
+          <li class="services__item services__item--mobile">
+            <img src="images/mobile-apps.jpg" class="services__image" alt="mobile apps" width="370" height="294">
+            <h3 class="services__subtitle">
+              mobile apps
+            </h3>
+          </li>
+          <li class="services__item services__item--design">
+            <img src="images/modern-design.jpg" class="services__image" alt="modern design" width="370" height="294">
+            <h3 class="services__subtitle">
+              modern design
+            </h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="team section">
+      <div class="container">
+        <h2 class="subtitle">
+          Our team
+        </h2>
+        <ul class="team__list">
+          <li class="team__item">
+            <img class="team__photo" src="images/Paul.jpg" alt="Paul Castanie" width="270" height="260">
+            <div class="team__card">
+              <h3 class="team__text team__text--name">
+                Paul Castanie
+              </h3>
+              <span class="team__text team__text--position">
+                Product Designer
+              </span>
+            </div>
+          </li>
+          <li class="team__item">
+            <img class="team__photo" src="images/Joanna.jpg" alt="Joanna Nix" width="270" height="260">
+            <div class="team__card">
+              <h3 class="team__text team__text--name">
+                Joanna Nix
+              </h3>
+              <span class="team__text team__text--position">
+                Frontend Developer
+              </span>
+            </div>
+          </li>
+          <li class="team__item">
+            <img class="team__photo" src="images/Aldo.jpg" alt="Aldo Delara" width="270" height="260">
+            <div class="team__card">
+              <h3 class="team__text team__text--name">
+                Aldo Delara
+              </h3>
+              <span class="team__text team__text--position">
+                Marketing
+              </span>
+            </div>
+          </li>
+          <li class="team__item">
+            <img class="team__photo" src="images/Oladimeji.jpg" alt="Oladimeji Odunsi" width="270" height="260">
+            <div class="team__card">
+              <h3 class="team__text team__text--name">
+                Oladimeji Odunsi
+              </h3>
+              <span class="team__text team__text--position">
+                UI Designer
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
     <div class="container">
-      <a class="footer__logo" href="#">
-        <img src="images/logo-footer.svg" alt="logo" class="footer__img" width="140" height="25">
+      <a class="logo logo--white footer__logo" href="#">
+        <img src="images/logo-white.svg" alt="logo DolGulDur" class="footer__img" width="140" height="25">
       </a>
       <address class="footer__contacts">
         <ul class="footer__list">
@@ -188,12 +199,12 @@
             </p>
           </li>
           <li class="footer__item">
-            <a class="footer__link--mail" href="mailto:webdev@gmail.com">
+            <a class="footer__link footer__link--mail" href="mailto:webdev@gmail.com">
               info@dolguldur.com
             </a>
           </li>
           <li class="footer__item">
-            <a class="footer__link--phone" href="tel:+380503223232">
+            <a class="footer__link footer__link--phone" href="tel:+380503223232">
               +38 099 111 11 11
             </a>
           </li>
