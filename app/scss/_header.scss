@@ -1,0 +1,75 @@
+.header {
+  border-bottom: 1px solid #ECECEC;
+
+  &__container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.user-contacts {
+  width: 50%;
+  color: $grey;
+  font-size: 14px;
+  display: flex;
+  justify-content: end;
+  gap: 55px;
+
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &::before {
+      content: '';
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 16px;
+      height: 16px;
+    }
+
+    &--mail::before {
+      background-image: url('../images/envelope.svg');
+
+    }
+
+    &--phone::before {
+      background-image: url('../images/smartphone.svg');
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  color: $dark;
+
+  &__list {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__link {
+    &.active {
+      color: $orange;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $orange;
+        top: calc(100% + 24px);
+        transform: translateY(100%);
+        left: 0;
+        position: absolute;
+      }
+    }
+  }
+}

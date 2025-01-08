@@ -1,0 +1,102 @@
+.hero {
+  background-color: $black;
+  padding: 200px 0;
+  color: $white;
+
+  &__content {
+    text-align: center;
+    max-width: 705px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.36;
+    margin-bottom: 30px;
+  }
+}
+
+.qualities {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $dark;
+    margin-bottom: 9px;
+  }
+
+  &__text {
+    color: $grey;
+    font-size: 14px;
+    line-height: 1.714;
+  }
+}
+
+.services {
+  padding-top: 0;
+  text-align: center;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__subtitle {
+    background-color: $blackout;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 400;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 15px;
+    z-index: 1;
+  }
+}
+
+.team {
+  background-color: $dark-white;
+  text-align: center;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__item {
+    max-width: 270px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+
+  &__content {
+    padding: 30px 5px;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: $dark;
+  }
+
+  &__position {
+    color: $grey;
+  }
+}

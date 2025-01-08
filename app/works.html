@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DolGulDur</title>
+  <link rel="icon" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container container">
+      <nav class="menu">
+        <a class="logo" href="#">
+          <img class="logo__img" src="./images/logo.svg" alt="logo DolGulDur" width="189" height="36">
+        </a>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">Home</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link active" href="#">Our Works</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="user-contacts header__user-contacts">
+        <li class="user-contacts__item">
+          <a class="user-contacts__link user-contacts__link--mail" href="mailto:info@gmail.com">
+            info@dolguldur.com
+          </a>
+        </li>
+        <li class="user-contacts__item">
+          <a class="user-contacts__link user-contacts__link--phone" href="tel:+380961111111">
+            +38 096 111 11 11
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <section class="gallery section">
+        <h2 class="sr-only">
+          Our Works
+        </h2>
+        <ul class="gallery__filter">
+          <li class="gallery__filter-item">
+            <button class="gallery__filter-button" type="button" data-filter="all">
+              All
+            </button>
+          </li>
+          <li class="gallery__filter-item">
+            <button class="gallery__filter-button" type="button" data-filter=".category-a">
+              Web-sites
+            </button>
+          </li>
+          <li class="gallery__filter-item">
+            <button class="gallery__filter-button" type="button" data-filter=".category-b">
+              Apps
+            </button>
+          </li>
+          <li class="gallery__filter-item">
+            <button class="gallery__filter-button" type="button" data-filter=".category-c">
+              Designes
+            </button>
+          </li>
+          <li class="gallery__filter-item">
+            <button class="gallery__filter-button" type="button" data-filter=".category-d">
+              Brands
+            </button>
+          </li>
+        </ul>
+        <ul class="gallery__content-list">
+          <li class="gallery__content-item mix category-a">
+            <figure class="gallery__content-info">
+              <img class="gallery__image" src="images/sofa.jpg" alt="Sofa World" width="370" height="294">
+              <figcaption class="gallery__caption">
+                <h4 class="gallery__subtitle">
+                  Sofa World
+                </h4>
+                <p class="gallery__text">
+                  Web-site
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="gallery__content-item mix category-d">
+            <figure class="gallery__content-info">
+              <img class="gallery__image" src="images/moby.jpg" alt="Moby Dick Caffe" width="370" height="294">
+              <figcaption class="gallery__caption">
+                <h4 class="gallery__subtitle">
+                  Moby Dick Caffe
+                </h4>
+                <p class="gallery__text">
+                  Brand
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="gallery__content-item mix category-b">
+            <figure class="gallery__content-info">
+              <img class="gallery__image" src="images/tesla.jpg" alt="Tesla charger-map" width="370" height="294">
+              <figcaption class="gallery__caption">
+                <h4 class="gallery__subtitle">
+                  Tesla charger-map
+                </h4>
+                <p class="gallery__text">
+                  App
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="gallery__content-item mix category-c">
+            <figure class="gallery__content-info">
+              <img class="gallery__image" src="images/bronze.jpg" alt="Bronze Sky" width="370" height="294">
+              <figcaption class="gallery__caption">
+                <h4 class="gallery__subtitle">
+                  Bronze Sky
+                </h4>
+                <p class="gallery__text">
+                  Design
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="gallery__content-item mix category-c">
+            <figure class="gallery__content-info">
+              <img class="gallery__image" src="images/cereal.jpg" alt="Cereal Travel Magazine" width="370" height="294">
+              <figcaption class="gallery__caption">
+                <h4 class="gallery__subtitle">
+                  Cereal Travel Magazine
+                </h4>
+                <p class="gallery__text">
+                  Design
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="gallery__content-item mix category-b">
+            <figure class="gallery__content-info">
+              <img class="gallery__image" src="images/photonium.jpg" alt="Photonium" width="370" height="294">
+              <figcaption class="gallery__caption">
+                <h4 class="gallery__subtitle">
+                  Photonium
+                </h4>
+                <p class="gallery__text">
+                  App
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="gallery__content-item mix category-d">
+            <figure class="gallery__content-info">
+              <img class="gallery__image" src="images/keep.jpg" alt="Keep Exploring" width="370" height="294">
+              <figcaption class="gallery__caption">
+                <h4 class="gallery__subtitle">
+                  Keep Exploring
+                </h4>
+                <p class="gallery__text">
+                  Brand
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="gallery__content-item mix category-c">
+            <figure class="gallery__content-info">
+              <img class="gallery__image" src="images/architecture.jpg" alt="Architectural conceptual projects" width="370" height="294">
+              <figcaption class="gallery__caption">
+                <h4 class="gallery__subtitle">
+                  Architectural conceptual projects
+                </h4>
+                <p class="gallery__text">
+                  Design
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="gallery__content-item mix category-a">
+            <figure class="gallery__content-info">
+              <img class="gallery__image" src="images/le-buzz.jpg" alt="Le Buzz food service" width="370" height="294">
+              <figcaption class="gallery__caption">
+                <h4 class="gallery__subtitle">
+                  Le Buzz food service
+                </h4>
+                <p class="gallery__text">
+                  Web-site
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <a class="logo logo--white footer__logo" href="#">
+        <img src="images/logo-white.svg" alt="logo DolGulDur" class="footer__img" width="140" height="25">
+      </a>
+      <address class="footer__contacts">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <p class="footer__address">
+              14 Green St., Belmont, Boston. USA
+            </p>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link footer__link--mail" href="mailto:webdev@gmail.com">
+              info@dolguldur.com
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link footer__link--phone" href="tel:+380503223232">
+              +38 099 111 11 11
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </footer>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

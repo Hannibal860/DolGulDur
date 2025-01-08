@@ -67,6 +67,7 @@ address {
 
 button {
   cursor: pointer;
+  border: none;
 }
 
 body {
@@ -76,6 +77,7 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 1.185;
+  letter-spacing: normal;
 }
 
 .sr-only {
@@ -130,12 +132,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.header__contacts {
+
+.user-contacts {
   width: 50%;
   color: #757575;
   font-size: 14px;
-}
-.header__contacts__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,7 +145,7 @@ body {
           justify-content: end;
   gap: 55px;
 }
-.header__contacts__link {
+.user-contacts__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,21 +154,19 @@ body {
           align-items: center;
   gap: 10px;
 }
-.header__contacts__link::before {
+.user-contacts__link::before {
   content: "";
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  width: 16px;
+  height: 16px;
 }
-.header__contacts__link--mail::before {
+.user-contacts__link--mail::before {
   background-image: url("../images/envelope.svg");
-  width: 16px;
-  height: 16px;
 }
-.header__contacts__link--phone::before {
+.user-contacts__link--phone::before {
   background-image: url("../images/smartphone.svg");
-  width: 16px;
-  height: 16px;
 }
 
 .menu {
@@ -209,7 +208,6 @@ body {
 
 .hero {
   background-color: #000;
-  text-align: center;
   padding: 200px 0;
   color: #fff;
 }
@@ -224,7 +222,6 @@ body {
   font-weight: 700;
   font-size: 44px;
   line-height: 1.36;
-  display: block;
   margin-bottom: 30px;
 }
 
@@ -265,36 +262,16 @@ body {
 .services__item {
   position: relative;
 }
-.services__item::after {
-  content: "";
-  color: #fff;
-  text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  background-color: rgba(47, 48, 58, 0.6);
-  left: 0;
-  bottom: 0;
-}
 .services__subtitle {
+  background-color: rgba(47, 48, 58, 0.6);
   text-transform: uppercase;
   color: #fff;
   font-weight: 400;
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: 26px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 15px;
   z-index: 1;
 }
 
@@ -319,15 +296,15 @@ body {
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
 }
-.team__card {
+.team__content {
   padding: 30px 5px;
 }
-.team__text--name {
+.team__subtitle {
   margin-bottom: 10px;
   font-weight: 500;
   color: #212121;
 }
-.team__text--position {
+.team__position {
   color: #757575;
 }
 
@@ -349,4 +326,61 @@ body {
 }
 .footer__item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.gallery__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.gallery__filter-button {
+  border-radius: 4px;
+  background-color: #F5F4FA;
+  color: #212121;
+  line-height: 1;
+  padding: 11px 26px;
+  -webkit-box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.1);
+}
+.gallery__content-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+.gallery__content-item {
+  max-width: 370px;
+  width: 100%;
+}
+.gallery__caption {
+  padding: 20px 24px;
+  border: 1px solid grey;
+  border-top: 0;
+}
+.gallery__subtitle {
+  font-size: 18px;
+  line-height: 2;
+  color: #212121;
+  font-weight: 400;
+}
+.gallery__text {
+  color: #757575;
+}
+
+.mixitup-control-active {
+  background-color: #EC3C05;
+  color: #fff;
 }
