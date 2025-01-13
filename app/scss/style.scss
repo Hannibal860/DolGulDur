@@ -26,7 +26,6 @@
   &__content-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 30px;
   }
 
@@ -34,7 +33,9 @@
     max-width: 370px;
     width: 100%;
   }
+}
 
+.gallery-card {
   &__caption {
     padding: 20px 24px;
     border: 1px solid grey;

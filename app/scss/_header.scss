@@ -55,21 +55,24 @@
   }
 
   &__link {
-    &.active {
-      color: $orange;
-      position: relative;
-
-      &::after {
+    position: relative;
+    padding: 24px 4px;
+    &::after {
         content: '';
         width: 100%;
         height: 4px;
         border-radius: 2px;
-        background-color: $orange;
-        top: calc(100% + 24px);
-        transform: translateY(100%);
+        background-color: transparent;
+        bottom: -8px;
         left: 0;
         position: absolute;
       }
-    }
+    &.current {
+      color: $orange;
+
+      &::after {
+        background-color: $orange;
+      }
+     }
   }
 }
