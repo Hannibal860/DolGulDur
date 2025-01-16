@@ -250,6 +250,7 @@ body {
   top: 0;
   left: 0;
   position: absolute;
+  overflow: hidden;
   z-index: -2;
 }
 .hero__background__item {
