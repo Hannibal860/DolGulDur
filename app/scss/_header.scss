@@ -21,24 +21,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-
-    &::before {
-      content: '';
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 16px;
-      height: 16px;
-    }
-
-    &--mail::before {
-      background-image: url('../images/envelope.svg');
-
-    }
-
-    &--phone::before {
-      background-image: url('../images/smartphone.svg');
-    }
   }
 }
 

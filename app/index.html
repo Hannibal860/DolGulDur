@@ -18,7 +18,9 @@
     <div class="header__container container">
       <nav class="menu">
         <a class="logo" href="#">
-          <img class="logo__img" src="./images/logo.svg" alt="logo DolGulDur" width="189" height="36">
+          <svg width="189" height="36">
+            <use xlink:href="images/symbol-defs.svg#icon-logo"></use>
+          </svg>
         </a>
         <ul class="menu__list">
           <li class="menu__item">
@@ -35,11 +37,17 @@
       <ul class="user-contacts">
         <li class="user-contacts__item">
           <a class="user-contacts__link user-contacts__link--mail" href="mailto:info@gmail.com">
+            <svg width="16" height="16">
+              <use xlink:href="images/symbol-defs.svg#icon-envelope"></use>
+            </svg>
             info@dolguldur.com
           </a>
         </li>
         <li class="user-contacts__item">
           <a class="user-contacts__link user-contacts__link--phone" href="tel:+380961111111">
+            <svg width="16" height="16">
+              <use xlink:href="images/symbol-defs.svg#icon-smartphone"></use>
+            </svg>
             +38 096 111 11 11
           </a>
         </li>
@@ -49,6 +57,13 @@
 
   <main class="main">
     <section class="hero section">
+
+      <ul class="hero__background">
+        <li class="hero__background__item hero__background__item--first" style="background-image: url('images/img3.jpg');"></li>
+        <li class="hero__background__item hero__background__item--second" style="background-image: url('images/img2.jpg');"></li>
+        <li class="hero__background__item hero__background__item--third" style="background-image: url('images/img.jpg');"></li>
+      </ul>
+      
       <div class="container">
         <div class="hero__content">
           <h1 class="hero__title">
@@ -68,6 +83,11 @@
       <div class="container">
         <ul class="qualities__list">
           <li class="qualities__item">
+            <div class="qualities__icon-wrapper">
+              <svg width="65" height="56">
+                <use xlink:href="images/symbol-defs.svg#icon-effective"></use>
+              </svg>
+            </div>
             <h3 class="qualities__subtitle">
               Effective team
             </h3>
@@ -76,6 +96,11 @@
             </p>
           </li>
           <li class="qualities__item">
+            <div class="qualities__icon-wrapper">
+              <svg width="49" height="59">
+                <use xlink:href="images/symbol-defs.svg#icon-punctuality"></use>
+              </svg>
+            </div>
             <h3 class="qualities__subtitle">
               punctuality
             </h3>
@@ -84,6 +109,11 @@
             </p>
           </li>
           <li class="qualities__item">
+            <div class="qualities__icon-wrapper">
+              <svg width="58" height="61">
+                <use xlink:href="images/symbol-defs.svg#icon-planning"></use>
+              </svg>
+            </div>
             <h3 class="qualities__subtitle">
               planning
             </h3>
@@ -92,6 +122,11 @@
             </p>
           </li>
           <li class="qualities__item">
+            <div class="qualities__icon-wrapper">
+              <svg width="57" height="57">
+                <use xlink:href="images/symbol-defs.svg#icon-innovation"></use>
+              </svg>
+            </div>
             <h3 class="qualities__subtitle">
               innovation
             </h3>
@@ -113,19 +148,19 @@
             <h3 class="services__subtitle">
               desktop apps
             </h3>
-            <img src="images/desktop-apps.jpg" class="services__image" alt="desktop apps" width="370" height="294">         
+            <img class="services__image" src="images/desktop-apps.jpg" alt="desktop apps" width="370" height="294">
           </li>
           <li class="services__item services__item--mobile">
             <h3 class="services__subtitle">
               mobile apps
             </h3>
-            <img src="images/mobile-apps.jpg" class="services__image" alt="mobile apps" width="370" height="294">            
+            <img class="services__image" src="images/mobile-apps.jpg" alt="mobile apps" width="370" height="294">
           </li>
           <li class="services__item services__item--design">
             <h3 class="services__subtitle">
               modern design
             </h3>
-            <img src="images/modern-design.jpg" class="services__image" alt="modern design" width="370" height="294">            
+            <img class="services__image" src="images/modern-design.jpg" alt="modern design" width="370" height="294">
           </li>
         </ul>
       </div>
@@ -146,6 +181,36 @@
               <span class="team__position">
                 Product Designer
               </span>
+              <ul class="social team__social">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-insta"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
           </li>
           <li class="team__item">
@@ -157,6 +222,36 @@
               <span class="team__position">
                 Frontend Developer
               </span>
+              <ul class="social team__social">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-insta"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
           </li>
           <li class="team__item">
@@ -168,18 +263,129 @@
               <span class="team__position">
                 Marketing
               </span>
+              <ul class="social team__social">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-insta"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
           </li>
           <li class="team__item">
             <img class="team__photo" src="images/oladimeji.jpg" alt="Oladimeji Odunsi" width="270" height="260">
             <div class="team__content">
               <h3 class="team__subtitle">
-                Oladimeji Odunsi
+                Oladimeji Odunsi Oladimeji Odunsi 
               </h3>
               <span class="team__position">
                 UI Designer
               </span>
+              <ul class="social team__social">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-insta"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="44" height="44">
+                      <use xlink:href="images/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="our-partners">
+      <div class="container">
+        <h2 class="title">
+          Our partners
+        </h2>
+        <ul class="partners">
+          <li class="partners__item"> 
+            <a href="" class="partners__link"> 
+            <svg width="60" height="60">
+              <use xlink:href="images/symbol-defs.svg#icon-rails"></use>
+            </svg>
+          </a> 
+          </li>
+          <li class="partners__item"> 
+            <a href="" class="partners__link"> 
+            <svg width="60" height="60">
+              <use xlink:href="images/symbol-defs.svg#icon-googlepay"></use>
+            </svg>
+          </a> 
+          </li>
+          <li class="partners__item"> 
+            <a href="" class="partners__link"> 
+            <svg width="60" height="60">
+              <use xlink:href="images/symbol-defs.svg#icon-playstation"></use>
+            </svg>
+          </a> 
+          </li>
+          <li class="partners__item"> 
+            <a href="" class="partners__link"> 
+            <svg width="60" height="60">
+              <use xlink:href="images/symbol-defs.svg#icon-applepay"></use>
+            </svg>
+          </a> 
+          </li>
+          <li class="partners__item"> 
+            <a href="" class="partners__link"> 
+            <svg width="60" height="60">
+              <use xlink:href="images/symbol-defs.svg#icon-npm"></use>
+            </svg>
+          </a> 
+          </li>
+          <li class="partners__item"> 
+            <a href="" class="partners__link"> 
+            <svg width="60" height="60">
+              <use xlink:href="images/symbol-defs.svg#icon-ubereats"></use>
+            </svg>
+          </a> 
           </li>
         </ul>
       </div>
@@ -187,9 +393,12 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
+    <div class="container footer__container">
+      <div class="footer__left">
       <a class="logo logo--white footer__logo" href="#">
-        <img src="images/logo-white.svg" alt="logo DolGulDur" class="footer__img" width="140" height="25">
+        <svg width="140" height="25">
+          <use xlink:href="images/symbol-defs.svg#icon-logo-white"></use>
+        </svg>
       </a>
       <address class="footer__contacts">
         <ul class="footer__list">
@@ -210,6 +419,42 @@
           </li>
         </ul>
       </address>
+      </div>
+      <div class="footer__right">
+        <span class="footer__right__text">
+          join
+        </span>
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg width="44" height="44">
+                <use xlink:href="images/symbol-defs.svg#icon-insta-dark"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg width="44" height="44">
+                <use xlink:href="images/symbol-defs.svg#icon-twitter-dark"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg width="44" height="44">
+                <use xlink:href="images/symbol-defs.svg#icon-facebook-dark"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg width="44" height="44">
+                <use xlink:href="images/symbol-defs.svg#icon-linkedin-dark"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </footer>
   <script src="js/main.min.js"></script>

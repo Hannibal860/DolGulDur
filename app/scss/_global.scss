@@ -47,3 +47,25 @@ body {
   font-weight: 400;
   font-size: 36px;
 }
+
+.social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.partners {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  &__link {
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #757575;
+  }
+
+}

@@ -21,6 +21,7 @@
   "dependencies": {
     "gulp-rename": "^2.0.0",
     "jquery": "^3.7.1",
-    "mixitup": "^3.3.2"
+    "mixitup": "^3.3.2",
+    "slick-carousel": "^1.8.0"
   }
 }
