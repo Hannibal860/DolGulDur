@@ -9,13 +9,12 @@
 }
 
 .user-contacts {
-  width: 50%;
+  margin-left: auto;
   color: $grey;
   font-size: 14px;
   display: flex;
   justify-content: end;
   gap: 55px;
-
 
   &__link {
     display: flex;
@@ -39,22 +38,24 @@
   &__link {
     position: relative;
     padding: 24px 4px;
+
     &::after {
-        content: '';
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-        background-color: transparent;
-        bottom: -8px;
-        left: 0;
-        position: absolute;
-      }
+      content: '';
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: transparent;
+      bottom: -8px;
+      left: 0;
+      position: absolute;
+    }
+
     &.current {
       color: $orange;
 
       &::after {
         background-color: $orange;
       }
-     }
+    }
   }
 }

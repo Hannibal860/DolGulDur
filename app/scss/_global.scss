@@ -52,20 +52,25 @@ body {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-}
-
-.partners {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
 
   &__link {
-    width: 170px;
-    height: 92px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #757575;
-  }
+    color: $grey;
 
+    &--dark {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: $white;
+    }
+  }
 }
+
+.icon {
+  fill: currentColor;
+}
+
+

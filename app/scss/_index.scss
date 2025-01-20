@@ -1,5 +1,6 @@
 .hero {
-  padding: 200px 0;
+  max-width: 1600px;
+  margin: 0 auto;
   color: $white;
   position: relative;
 
@@ -15,10 +16,8 @@
   }
 
   &__background {
-    max-width: 1600px;
     width: 100%;
     height: 100%;
-    margin: 0 auto;
     top: 0;
     left: 0;
     position: absolute;
@@ -26,7 +25,7 @@
     z-index: -2;
   }
 
-  &__background__item {
+  &__background-item {
     display: block;
     width: 100%;
     height: 600px;
@@ -35,11 +34,16 @@
     background-repeat: no-repeat;
   }
 
+  &__container {
+    display: flex;
+    height: 55vh;
+  }
+
   &__content {
     text-align: center;
     max-width: 705px;
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
   }
 
   &__title {
@@ -64,12 +68,45 @@
   }
 
   &__icon-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 120px;
     border: 1px solid rgba(117, 117, 117, 1);
     margin-bottom: 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__icon-wrapper--effective::before {
+    background-image: url('../images/icons/effective.svg');
+    width: 65px;
+    height: 56px;
+  }
+
+  &__icon-wrapper--punctuality::before {
+    background-image: url('../images/icons/punctuality.svg');
+    width: 49px;
+    height: 59px;
+  }
+
+  &__icon-wrapper--planning::before {
+    background-image: url('../images/icons/planning.svg');
+    width: 58px;
+    height: 61px;
+  }
+
+  &__icon-wrapper--innovation::before {
+    background-image: url('../images/icons/innovation.svg');
+    width: 57px;
+    height: 57px;
   }
 
   &__subtitle {
@@ -125,7 +162,6 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
     gap: 30px;
   }
 
@@ -135,7 +171,9 @@
     text-align: center;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
-    background-color: #fff;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
   }
 
   &__photo {
@@ -146,8 +184,9 @@
     padding: 30px 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
   }
 
   &__subtitle {
@@ -159,14 +198,27 @@
   &__position {
     color: $grey;
     margin-bottom: 16px;
-  }
-
-  &__social {
-    margin: 0 auto;
+    margin-top: auto;
   }
 }
 
-.our-partners {
+.partners {
   text-align: center;
   padding: 94px 0;
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $grey;
+    border: 1px solid currentColor;
+  }
 }
