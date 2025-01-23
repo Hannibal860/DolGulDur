@@ -1,3 +1,64 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  z-index: 10;
+  transition: opacity 0.3s;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__window {
+    width: 528px;
+    height: 581px;
+    background-color: $white;
+    box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
+    position: relative;
+    transform: scale(1);
+    transition: 0.3s;
+  }
+
+  &__close {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:focus {
+      border-color: $orange;
+    }
+
+    &:active {
+      box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+.is-hidden>.modal__window {
+  width: 0;
+  height: 0;
+}
+
 .hero {
   max-width: 1600px;
   margin: 0 auto;
@@ -28,7 +89,7 @@
   &__background-item {
     display: block;
     width: 100%;
-    height: 600px;
+    height: 55vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -71,42 +132,9 @@
     height: 120px;
     border: 1px solid rgba(117, 117, 117, 1);
     margin-bottom: 30px;
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  &__icon-wrapper--effective::before {
-    background-image: url('../images/icons/effective.svg');
-    width: 65px;
-    height: 56px;
-  }
-
-  &__icon-wrapper--punctuality::before {
-    background-image: url('../images/icons/punctuality.svg');
-    width: 49px;
-    height: 59px;
-  }
-
-  &__icon-wrapper--planning::before {
-    background-image: url('../images/icons/planning.svg');
-    width: 58px;
-    height: 61px;
-  }
-
-  &__icon-wrapper--innovation::before {
-    background-image: url('../images/icons/innovation.svg');
-    width: 57px;
-    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__subtitle {
@@ -220,5 +248,21 @@
     align-items: center;
     color: $grey;
     border: 1px solid currentColor;
+    outline: 1px solid transparent;
+    outline-offset: 4px;
+    border-radius: 4px;
+    transition: outline-color 0.2s, opacity 0.2s, color 0.2s;
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:focus {
+      outline-color: $orange;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 }

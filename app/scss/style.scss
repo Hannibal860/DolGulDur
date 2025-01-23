@@ -1,64 +1,10 @@
 @import 'reset';
-@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import 'libs';
 @import 'vars';
+@import 'common';
 @import 'global';
-@import 'header';
+@import 'components/header';
 @import 'index';
-@import 'footer';
+@import 'components/footer';
+@import 'works';
 
-.gallery {
-  &__filter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 50px;
-  }
-
-  &__filter-button {
-    border-radius: 4px;
-    background-color: $dark-white;
-    color: $dark;
-    line-height: 1;
-    padding: 11px 26px;
-    box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.1);
-  }
-
-  &__content-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-
-  &__content-item {
-    max-width: 370px;
-    width: 100%;
-  }
-}
-
-.gallery-card {
-  &__caption {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px 24px;
-    border: 1px solid grey;
-    border-top: 0;
-  }
-
-  &__subtitle {
-    font-size: 18px;
-    line-height: 2;
-    color: $dark;
-    font-weight: 400;
-  }
-
-  &__text {
-    color: $grey;
-  }
-}
-
-.mixitup-control-active {
-  background-color: $orange;
-  color: $white;
-}

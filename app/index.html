@@ -5,7 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web studio DolGulDur</title>
-  <link rel="icon" href="images/favicon.svg">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="images/favicon/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
@@ -14,6 +18,15 @@
 </head>
 
 <body>
+  <div class="modal is-hidden" data-modal>
+    <div class="modal__window">
+      <button class="modal__close" type="button" data-modal-close>
+        <svg class="user-contacts__icon icon" width="15" height="15">
+          <use xlink:href="images/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
   <header class="header">
     <div class="header__container container">
       <nav class="menu">
@@ -54,7 +67,7 @@
   </header>
 
   <main class="main">
-    <section class="hero section">
+    <section class="hero">
       <div class="hero__background">
         <div class="hero__background-item" style="background-image: url('images/hero/img3.jpg');"></div>
         <div class="hero__background-item" style="background-image: url('images/hero/img2.jpg');"></div>
@@ -65,7 +78,7 @@
           <h1 class="hero__title">
             author's forge where your sites are created
           </h1>
-          <button class="button" type="button">
+          <button class="button" type="button" data-modal-open>
             Go to order
           </button>
         </div>
@@ -80,6 +93,9 @@
         <ul class="qualities__list">
           <li class="qualities__item">
             <div class="qualities__icon-wrapper qualities__icon-wrapper--effective">
+              <svg class="icon" width="65" height="56">
+                <use xlink:href="images/sprite.svg#icon-effective"></use>
+              </svg>
             </div>
             <h3 class="qualities__subtitle">
               Effective team
@@ -90,6 +106,9 @@
           </li>
           <li class="qualities__item">
             <div class="qualities__icon-wrapper qualities__icon-wrapper--punctuality">
+              <svg class="icon" width="49" height="59">
+                <use xlink:href="images/sprite.svg#icon-punctuality"></use>
+              </svg>
             </div>
             <h3 class="qualities__subtitle">
               punctuality
@@ -100,6 +119,9 @@
           </li>
           <li class="qualities__item">
             <div class="qualities__icon-wrapper qualities__icon-wrapper--planning">
+              <svg class="icon" width="58" height="61">
+                <use xlink:href="images/sprite.svg#icon-planning"></use>
+              </svg>
             </div>
             <h3 class="qualities__subtitle">
               planning
@@ -110,6 +132,9 @@
           </li>
           <li class="qualities__item">
             <div class="qualities__icon-wrapper qualities__icon-wrapper--innovation">
+              <svg class="icon" width="57" height="57">
+                <use xlink:href="images/sprite.svg#icon-innovation"></use>
+              </svg>
             </div>
             <h3 class="qualities__subtitle">
               innovation

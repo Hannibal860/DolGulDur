@@ -1,0 +1,98 @@
+.gallery {
+  &__filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+
+  &__filter-button {
+    border-radius: 4px;
+    background-color: $dark-white;
+    color: $dark;
+    line-height: 1;
+    padding: 11px 26px;
+    box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.1);
+
+    &.mixitup-control-active {
+      background-color: $orange;
+      color: $white;
+    }
+  }
+
+  &__content-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__content-item {
+    max-width: 370px;
+    width: 100%;
+  }
+}
+
+.gallery-card {
+
+  &__image-wrapper {
+    position: relative;
+  }
+
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    color: $white;
+    font-size: 18px;
+    line-height: 1.56;
+    background-color: rgba(236, 60, 5, 0.8);
+    opacity: 0;
+  }
+  
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border: 1px solid grey;
+    border-top: 0;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    line-height: 2;
+    color: $dark;
+    font-weight: 400;
+  }
+
+  &__text {
+    color: $grey;
+  }
+}
+
+@keyframes card-cover {
+  0% {
+    height: 0;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    height: 100%;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-animation {
+  animation-name: card-cover;
+  animation-timing-function: linear;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+

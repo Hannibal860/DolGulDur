@@ -8,23 +8,14 @@ body {
   letter-spacing: normal;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.icon {
+  fill: currentColor;
 }
 
 .section {
@@ -39,6 +30,21 @@ body {
   border-radius: 4px;
   letter-spacing: 2.5px;
   padding: 10px 50px;
+  outline: 1px solid transparent;
+  outline-offset: 4px;
+  transition: box-shadow 0.2s, outline-color 0.2s;
+
+  &:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  &:focus {
+    outline-color: $orange;
+  }
+
+  &:active {
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .title {
@@ -61,6 +67,29 @@ body {
     justify-content: center;
     align-items: center;
     color: $grey;
+    outline: 1px solid transparent;
+    outline-offset: 4px;
+    transition: outline-color 0.2s, box-shadow 0.2s, fill 0.2s, background-color 0.2s;
+
+    .icon {
+      transition: fill 0.2s;
+    }
+
+    &:hover {
+      background-color: $orange;
+
+      .icon {
+      fill: $white;
+      }
+    }
+
+    &:focus {
+      outline-color: $orange;
+    }
+
+    &:active {
+      box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.4);
+    }
 
     &--dark {
       background-color: rgba(255, 255, 255, 0.1);
@@ -68,9 +97,4 @@ body {
     }
   }
 }
-
-.icon {
-  fill: currentColor;
-}
-
 

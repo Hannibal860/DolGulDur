@@ -5,7 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our works | Web studio DolGulDur</title>
-  <link rel="icon" href="images/favicon.svg">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="images/favicon/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
@@ -25,7 +29,7 @@
             <a class="menu__link" href="index.html">Home</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link current" href="#">Our Works</a>
+            <a class="menu__link current" href="works.html">Our Works</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">Contacts</a>
@@ -35,7 +39,7 @@
       <ul class="user-contacts">
         <li class="user-contacts__item">
           <a class="user-contacts__link" href="mailto:info@gmail.com">
-            <svg class="user-contacts__icon" width="16" height="16">
+            <svg class="user-contacts__icon icon" width="16" height="16">
               <use xlink:href="images/sprite.svg#icon-envelope"></use>
             </svg>
             info@dolguldur.com
@@ -43,7 +47,7 @@
         </li>
         <li class="user-contacts__item">
           <a class="user-contacts__link" href="tel:+380961111111">
-            <svg class="user-contacts__icon" width="16" height="16">
+            <svg class="user-contacts__icon icon" width="16" height="16">
               <use xlink:href="images/sprite.svg#icon-smartphone"></use>
             </svg>
             +38 096 111 11 11
@@ -54,14 +58,11 @@
   </header>
 
   <main class="main">
-    <h1 class="sr-only">
-      Our works
-    </h1>
     <section class="gallery section">
       <div class="container">
-        <h2 class="sr-only">
+        <h1 class="sr-only">
           Our Works
-        </h2>
+        </h1>
         <ul class="gallery__filter">
           <li class="gallery__filter-item">
             <button class="gallery__filter-button" type="button" data-filter="all">
@@ -92,7 +93,15 @@
         <ul class="gallery__content-list">
           <li class="gallery__content-item mix category-a">
             <div class="gallery-card">
-              <img class="gallery-card__image" src="images/gallery/sofa.jpg" alt="Sofa World" width="370" height="294">
+              <div class="gallery-card__image-wrapper">
+                <div class="gallery-card__cover">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco consequat.
+                </div>
+                <img class="gallery-card__image" src="images/gallery/sofa.jpg" alt="Sofa World" width="370"
+                  height="294">
+              </div>
               <div class="gallery-card__caption">
                 <h3 class="gallery-card__subtitle">
                   Sofa World
@@ -105,7 +114,15 @@
           </li>
           <li class="gallery__content-item mix category-d">
             <div class="gallery-card">
-              <img class="gallery-card__image" src="images/gallery/moby.jpg" alt="Moby Dick Caffe" width="370" height="294">
+              <div class="gallery-card__image-wrapper">
+                <div class="gallery-card__cover">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco consequat.
+                </div>
+              <img class="gallery-card__image" src="images/gallery/moby.jpg" alt="Moby Dick Caffe" width="370"
+                height="294">
+                </div>
               <div class="gallery-card__caption">
                 <h3 class="gallery-card__subtitle">
                   Moby Dick Caffe
@@ -118,7 +135,15 @@
           </li>
           <li class="gallery__content-item mix category-b">
             <div class="gallery-card">
-              <img class="gallery-card__image" src="images/gallery/tesla.jpg" alt="Tesla charger-map" width="370" height="294">
+              <div class="gallery-card__image-wrapper">
+                <div class="gallery-card__cover">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco consequat.
+                </div>
+              <img class="gallery-card__image" src="images/gallery/tesla.jpg" alt="Tesla charger-map" width="370"
+                height="294">
+                </div>
               <div class="gallery-card__caption">
                 <h3 class="gallery-card__subtitle">
                   Tesla charger-map
@@ -131,7 +156,15 @@
           </li>
           <li class="gallery__content-item mix category-c">
             <div class="gallery-card">
-              <img class="gallery-card__image" src="images/gallery/bronze.jpg" alt="Bronze Sky" width="370" height="294">
+              <div class="gallery-card__image-wrapper">
+                <div class="gallery-card__cover">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco consequat.
+                </div>
+              <img class="gallery-card__image" src="images/gallery/bronze.jpg" alt="Bronze Sky" width="370"
+                height="294">
+                </div>
               <div class="gallery-card__caption">
                 <h3 class="gallery-card__subtitle">
                   Bronze Sky
@@ -144,8 +177,15 @@
           </li>
           <li class="gallery__content-item mix category-c">
             <div class="gallery-card">
+              <div class="gallery-card__image-wrapper">
+                <div class="gallery-card__cover">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco consequat.
+                </div>
               <img class="gallery-card__image" src="images/gallery/cereal.jpg" alt="Cereal Travel Magazine" width="370"
                 height="294">
+                </div>
               <div class="gallery-card__caption">
                 <h3 class="gallery-card__subtitle">
                   Cereal Travel Magazine
@@ -158,7 +198,15 @@
           </li>
           <li class="gallery__content-item mix category-b">
             <div class="gallery-card">
-              <img class="gallery-card__image" src="images/gallery/photonium.jpg" alt="Photonium" width="370" height="294">
+              <div class="gallery-card__image-wrapper">
+                <div class="gallery-card__cover">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco consequat.
+                </div>
+              <img class="gallery-card__image" src="images/gallery/photonium.jpg" alt="Photonium" width="370"
+                height="294">
+                </div>
               <div class="gallery-card__caption">
                 <h3 class="gallery-card__subtitle">
                   Photonium
@@ -171,7 +219,15 @@
           </li>
           <li class="gallery__content-item mix category-d">
             <div class="gallery-card">
-              <img class="gallery-card__image" src="images/gallery/keep.jpg" alt="Keep Exploring" width="370" height="294">
+              <div class="gallery-card__image-wrapper">
+                <div class="gallery-card__cover">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco consequat.
+                </div>
+              <img class="gallery-card__image" src="images/gallery/keep.jpg" alt="Keep Exploring" width="370"
+                height="294">
+                </div>
               <div class="gallery-card__caption">
                 <h3 class="gallery-card__subtitle">
                   Keep Exploring
@@ -184,8 +240,15 @@
           </li>
           <li class="gallery__content-item mix category-c">
             <div class="gallery-card">
-              <img class="gallery-card__image" src="images/gallery/architecture.jpg" alt="Architectural conceptual projects"
-                width="370" height="294">
+              <div class="gallery-card__image-wrapper">
+                <div class="gallery-card__cover">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco consequat.
+                </div>
+              <img class="gallery-card__image" src="images/gallery/architecture.jpg"
+                alt="Architectural conceptual projects" width="370" height="294">
+                </div>
               <div class="gallery-card__caption">
                 <h3 class="gallery-card__subtitle">
                   Architectural conceptual projects
@@ -198,8 +261,15 @@
           </li>
           <li class="gallery__content-item mix category-a">
             <div class="gallery-card">
+              <div class="gallery-card__image-wrapper">
+                <div class="gallery-card__cover">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco consequat.
+                </div>
               <img class="gallery-card__image" src="images/gallery/le-buzz.jpg" alt="Le Buzz food service" width="370"
                 height="294">
+                </div>
               <div class="gallery-card__caption">
                 <h3 class="gallery-card__subtitle">
                   Le Buzz food service
@@ -214,7 +284,7 @@
       </div>
     </section>
   </main>
-  
+
   <footer class="footer">
     <div class="container footer__container">
       <div class="footer__left">
@@ -229,48 +299,48 @@
               </p>
             </li>
             <li class="footer__item">
-              <a class="footer__link footer__link--mail" href="mailto:webdev@gmail.com">
+              <a class="footer__link" href="mailto:webdev@gmail.com">
                 info@dolguldur.com
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link footer__link--phone" href="tel:+380503223232">
+              <a class="footer__link" href="tel:+380503223232">
                 +38 099 111 11 11
               </a>
             </li>
           </ul>
         </address>
       </div>
-      <div class="footer__right">
-        <span class="footer__right__text">
+      <div class="footer__join">
+        <span class="footer__join-text">
           join
         </span>
         <ul class="social">
           <li class="social__item">
-            <a class="social__link" href="#">
-              <svg width="44" height="44">
-                <use xlink:href="images/sprite.svg#icon-insta-dark"></use>
+            <a class="social__link social__link--dark" href="#">
+              <svg class="icon" width="20" height="20">
+                <use xlink:href="images/sprite.svg#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
-              <svg width="44" height="44">
-                <use xlink:href="images/sprite.svg#icon-twitter-dark"></use>
+            <a class="social__link social__link--dark" href="#">
+              <svg class="icon" width="20" height="20">
+                <use xlink:href="images/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
-              <svg width="44" height="44">
-                <use xlink:href="images/sprite.svg#icon-facebook-dark"></use>
+            <a class="social__link social__link--dark" href="#">
+              <svg class="icon" width="20" height="20">
+                <use xlink:href="images/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
-              <svg width="44" height="44">
-                <use xlink:href="images/sprite.svg#icon-linkedin-dark"></use>
+            <a class="social__link social__link--dark" href="#">
+              <svg class="icon" width="20" height="20">
+                <use xlink:href="images/sprite.svg#icon-linkedin"></use>
               </svg>
             </a>
           </li>

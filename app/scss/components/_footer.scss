@@ -19,10 +19,29 @@
   }
 
   &__item {
-    color: $orange;
 
     &:not(:last-child) {
       margin-bottom: 9px;
+    }
+  }
+
+  &__link {
+    color: $orange;
+    padding: 4px;
+    outline: 1px solid transparent;
+    border-radius: 4px;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #F29040;
+    }
+
+    &:focus {
+      outline-color: $orange;
+    }
+
+    &:active {
+      color: #F29040;
     }
   }
 
