@@ -14,10 +14,31 @@
     line-height: 1;
     padding: 11px 26px;
     box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.1);
+    outline: 1px solid transparent;
+    outline-offset: 4px;
+    transition: outline-color 0.2s, background-color 0.2s, color 0.2s, box-shadow 0.2s;
 
     &.mixitup-control-active {
       background-color: $orange;
       color: $white;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    &:hover {
+      background-color: $orange;
+      color: $white;
+    }
+
+    &:focus {
+      background-color: $orange;
+      outline-color: $orange;
+      color: $white;
+    }
+
+    &:active {
+      background-color: $orange;
+      color: $white;
+      box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.4);
     }
   }
 
@@ -35,8 +56,16 @@
 
 .gallery-card {
 
+  &:hover,
+  &:focus {
+    .gallery-card__cover {
+      transform: translateY(0);
+    }
+  }
+
   &__image-wrapper {
     position: relative;
+    overflow: hidden;
   }
 
   &__cover {
@@ -50,9 +79,10 @@
     font-size: 18px;
     line-height: 1.56;
     background-color: rgba(236, 60, 5, 0.8);
-    opacity: 0;
+    transform: translateY(101%);
+    transition: transform 0.2s;
   }
-  
+
   &__caption {
     display: flex;
     flex-direction: column;
@@ -73,26 +103,3 @@
     color: $grey;
   }
 }
-
-@keyframes card-cover {
-  0% {
-    height: 0;
-    opacity: 0;
-    transform: translateY(100%);
-  }
-
-  100% {
-    height: 100%;
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.card-animation {
-  animation-name: card-cover;
-  animation-timing-function: linear;
-  animation-duration: 200ms;
-  animation-fill-mode: forwards;
-  animation-direction: normal;
-}
-

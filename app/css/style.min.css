@@ -191,6 +191,125 @@ body {
   padding: 0 15px;
 }
 
+.logo {
+  position: relative;
+}
+.logo::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: transparent;
+  bottom: -23px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.logo:hover::after {
+  background-color: #EC3C05;
+}
+.logo:focus {
+  opacity: 0.8;
+}
+.logo:focus::after {
+  opacity: 0.8;
+}
+.logo:active {
+  opacity: 0.6;
+}
+.logo:active::after {
+  opacity: 0.6;
+}
+
+.backdrop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  z-index: 10;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+.modal {
+  max-width: 528px;
+  width: 100%;
+  height: 581px;
+  background-color: #fff;
+  -webkit-box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
+          box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
+  position: relative;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.close-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  -webkit-transition: border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+  transition: border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+.close-button:hover {
+  color: #EC3C05;
+}
+.close-button:focus {
+  border-color: #EC3C05;
+}
+.close-button:active {
+  -webkit-box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.12);
+          box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.12);
+}
+
+.is-hidden > .modal {
+  width: 0;
+  height: 0;
+}
+
 .icon {
   fill: currentColor;
 }
@@ -241,6 +360,10 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+.social--dark .social__link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
 .social__link {
   width: 44px;
   height: 44px;
@@ -257,31 +380,27 @@ body {
   color: #757575;
   outline: 1px solid transparent;
   outline-offset: 4px;
-  -webkit-transition: outline-color 0.2s, fill 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
-  transition: outline-color 0.2s, fill 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
-  transition: outline-color 0.2s, box-shadow 0.2s, fill 0.2s, background-color 0.2s;
-  transition: outline-color 0.2s, box-shadow 0.2s, fill 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
+  -webkit-transition: outline-color 0.2s, color 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: outline-color 0.2s, color 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: outline-color 0.2s, box-shadow 0.2s, color 0.2s, background-color 0.2s;
+  transition: outline-color 0.2s, box-shadow 0.2s, color 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
 }
 .social__link .icon {
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 .social__link:hover {
   background-color: #EC3C05;
-}
-.social__link:hover .icon {
-  fill: #fff;
+  color: #fff;
 }
 .social__link:focus {
   outline-color: #EC3C05;
 }
 .social__link:active {
+  background-color: #EC3C05;
+  color: #fff;
   -webkit-box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.4);
           box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.4);
-}
-.social__link--dark {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
 }
 
 .header {
@@ -321,8 +440,8 @@ body {
   padding: 24px 4px;
   border-radius: 4px;
   outline: 1px solid transparent;
-  -webkit-transition: outline-color 0.2s, color 0.2s, opacity 0.7;
-  transition: outline-color 0.2s, color 0.2s, opacity 0.7;
+  -webkit-transition: outline-color 0.2s, color 0.2s, opacity 0.2s;
+  transition: outline-color 0.2s, color 0.2s, opacity 0.2s;
 }
 .menu__link::after {
   content: "";
@@ -333,6 +452,8 @@ body {
   bottom: -8px;
   left: 0;
   position: absolute;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 .menu__link.current {
   color: #EC3C05;
@@ -344,13 +465,13 @@ body {
   color: #EC3C05;
 }
 .menu__link:hover::after {
-  background-color: currentColor;
+  background-color: #EC3C05;
 }
 .menu__link:focus {
   outline-color: #EC3C05;
 }
 .menu__link:focus::after {
-  background-color: currentColor;
+  background-color: #EC3C05;
 }
 .menu__link:active {
   color: #EC3C05;
@@ -396,82 +517,6 @@ body {
 .user-contacts__link:active {
   color: #EC3C05;
   opacity: 0.7;
-}
-
-.modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.1);
-  opacity: 1;
-  z-index: 10;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-.modal.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.modal__window {
-  width: 528px;
-  height: 581px;
-  background-color: #fff;
-  -webkit-box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
-          box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
-  position: relative;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.modal__close {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  -webkit-transition: border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-  transition: border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
-  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
-}
-.modal__close:hover {
-  color: #EC3C05;
-}
-.modal__close:focus {
-  border-color: #EC3C05;
-}
-.modal__close:active {
-  -webkit-box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.12);
-          box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.12);
-}
-
-.is-hidden > .modal__window {
-  width: 0;
-  height: 0;
 }
 
 .hero {
@@ -698,6 +743,8 @@ body {
   outline-color: #EC3C05;
 }
 .partners__link:active {
+  color: #EC3C05;
+  outline-color: transparent;
   opacity: 0.7;
 }
 
@@ -771,10 +818,33 @@ body {
   padding: 11px 26px;
   -webkit-box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.1);
+  outline: 1px solid transparent;
+  outline-offset: 4px;
+  -webkit-transition: outline-color 0.2s, background-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+  transition: outline-color 0.2s, background-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+  transition: outline-color 0.2s, background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  transition: outline-color 0.2s, background-color 0.2s, color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
 .gallery__filter-button.mixitup-control-active {
   background-color: #EC3C05;
   color: #fff;
+  -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+.gallery__filter-button:hover {
+  background-color: #EC3C05;
+  color: #fff;
+}
+.gallery__filter-button:focus {
+  background-color: #EC3C05;
+  outline-color: #EC3C05;
+  color: #fff;
+}
+.gallery__filter-button:active {
+  background-color: #EC3C05;
+  color: #fff;
+  -webkit-box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.4);
 }
 .gallery__content-list {
   display: -webkit-box;
@@ -789,8 +859,14 @@ body {
   width: 100%;
 }
 
+.gallery-card:hover .gallery-card__cover, .gallery-card:focus .gallery-card__cover {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
 .gallery-card__image-wrapper {
   position: relative;
+  overflow: hidden;
 }
 .gallery-card__cover {
   position: absolute;
@@ -803,7 +879,13 @@ body {
   font-size: 18px;
   line-height: 1.56;
   background-color: rgba(236, 60, 5, 0.8);
-  opacity: 0;
+  -webkit-transform: translateY(101%);
+      -ms-transform: translateY(101%);
+          transform: translateY(101%);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 .gallery-card__caption {
   display: -webkit-box;
@@ -828,46 +910,4 @@ body {
 }
 .gallery-card__text {
   color: #757575;
-}
-
-@-webkit-keyframes card-cover {
-  0% {
-    height: 0;
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-  100% {
-    height: 100%;
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes card-cover {
-  0% {
-    height: 0;
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-  100% {
-    height: 100%;
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-.card-animation {
-  -webkit-animation-name: card-cover;
-          animation-name: card-cover;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-duration: 200ms;
-          animation-duration: 200ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
 }

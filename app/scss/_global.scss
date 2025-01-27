@@ -14,6 +14,112 @@ body {
   padding: 0 15px;
 }
 
+.logo {
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: transparent;
+    bottom: -23px;
+    left: 0;
+    position: absolute;
+    transition: background-color 0.2s;
+  }
+
+
+  &:hover {
+    &::after {
+      background-color: $orange;
+    }
+  }
+
+  &:focus {
+    opacity: 0.8;
+
+    &::after {
+      opacity: 0.8;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+
+    &::after {
+      opacity: 0.6;
+    }
+  }
+}
+
+.backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.3s;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    .modal {
+      transform: scale(0);
+    }
+  }
+}
+
+.modal {
+  max-width: 528px;
+  width: 100%;
+  height: 581px;
+  background-color: $white;
+  box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
+  position: relative;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+
+.close-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    color: $orange;
+  }
+
+  &:focus {
+    border-color: $orange;
+  }
+
+  &:active {
+    box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.is-hidden>.modal {
+  width: 0;
+  height: 0;
+}
+
 .icon {
   fill: currentColor;
 }
@@ -59,6 +165,13 @@ body {
   gap: 10px;
   flex-wrap: wrap;
 
+  &--dark {
+    .social__link {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: $white;
+    }
+  }
+
   &__link {
     width: 44px;
     height: 44px;
@@ -69,18 +182,15 @@ body {
     color: $grey;
     outline: 1px solid transparent;
     outline-offset: 4px;
-    transition: outline-color 0.2s, box-shadow 0.2s, fill 0.2s, background-color 0.2s;
+    transition: outline-color 0.2s, box-shadow 0.2s, color 0.2s, background-color 0.2s;
 
     .icon {
-      transition: fill 0.2s;
+      transition: color 0.2s;
     }
 
     &:hover {
       background-color: $orange;
-
-      .icon {
-      fill: $white;
-      }
+      color: $white;
     }
 
     &:focus {
@@ -88,13 +198,9 @@ body {
     }
 
     &:active {
-      box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.4);
-    }
-
-    &--dark {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: $orange;
       color: $white;
+      box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.4);
     }
   }
 }
-

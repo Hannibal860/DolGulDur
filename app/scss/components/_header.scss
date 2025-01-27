@@ -25,7 +25,7 @@
     padding: 24px 4px;
     border-radius: 4px;
     outline: 1px solid transparent;
-    transition: outline-color 0.2s, color 0.2s, opacity 0.7;
+    transition: outline-color 0.2s, color 0.2s, opacity 0.2s;
 
     &::after {
       content: '';
@@ -36,6 +36,7 @@
       bottom: -8px;
       left: 0;
       position: absolute;
+      transition: background-color 0.2s;
     }
 
     &.current {
@@ -50,7 +51,7 @@
       color: $orange;
 
       &::after {
-        background-color: currentColor;
+        background-color: $orange;
       }
     }
 
@@ -58,7 +59,7 @@
       outline-color: $orange;
 
       &::after {
-        background-color: currentColor;
+        background-color: $orange;
       }
     }
 
