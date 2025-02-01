@@ -186,23 +186,21 @@
     justify-content: center;
     align-items: center;
     color: $grey;
-    border: 1px solid currentColor;
-    outline: 1px solid transparent;
+    border: 1px solid currentColor;    
     outline-offset: 4px;
     border-radius: 4px;
-    transition: outline-color 0.2s, opacity 0.2s, color 0.2s;
+    transition: outline 0.2s, opacity 0.2s, color 0.2s;
 
     &:hover {
       color: $orange;
     }
 
     &:focus {
-      outline-color: $orange;
+      outline: 1px solid $orange;
     }
 
     &:active {
       color: $orange;
-      outline-color: transparent;
       opacity: 0.7;
     }
   }

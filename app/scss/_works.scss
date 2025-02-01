@@ -16,7 +16,7 @@
     box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.1);
     outline: 1px solid transparent;
     outline-offset: 4px;
-    transition: outline-color 0.2s, background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition: outline 0.2s, background-color 0.2s, color 0.2s, box-shadow 0.2s;
 
     &.mixitup-control-active {
       background-color: $orange;
@@ -31,7 +31,7 @@
 
     &:focus {
       background-color: $orange;
-      outline-color: $orange;
+      outline: 1px solid $orange;
       color: $white;
     }
 
@@ -55,10 +55,12 @@
 }
 
 .gallery-card {
+  display: flex;
+  flex-direction: column-reverse;
 
   &:hover,
   &:focus {
-    .gallery-card__cover {
+    .gallery-card__description {
       transform: translateY(0);
     }
   }
@@ -68,7 +70,7 @@
     overflow: hidden;
   }
 
-  &__cover {
+  &__description {
     position: absolute;
     top: 0;
     left: 0;
@@ -83,7 +85,7 @@
     transition: transform 0.2s;
   }
 
-  &__caption {
+  &__inner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

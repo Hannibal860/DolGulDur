@@ -7,6 +7,7 @@ const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
 const rename = require('gulp-rename');
+const fileinclude = require('gulp-file-include');
 
 
 function scripts() {
@@ -31,11 +32,21 @@ function styles() {
   .pipe(browserSync.stream())
 }
 
+function htmlInclude() {
+  return src('app/html/pages/*.html')
+  .pipe(fileinclude({
+    prefix: '@@',
+    basepath: '@file'
+  }))
+
+  .pipe(dest('app'))
+  .pipe(browserSync.stream());
+}
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/*.html']).on('change', browserSync.reload);
+  watch(['app/html/**/*.html'], htmlInclude);
 }
 
 function browsersync() {
@@ -57,6 +68,7 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.watching = watching;
 exports.browsersync = browsersync;
+exports.htmlInclude = htmlInclude;
 
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, browsersync, watching, htmlInclude);

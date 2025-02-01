@@ -68,3 +68,15 @@ button {
   border: none;
   background-color: transparent;
 }
+
+button, 
+a,
+input,
+textarea {
+  outline-color: transparent;
+}
+
+input,
+textarea {
+  border-color: transparent;
+}

@@ -23,9 +23,8 @@
   &__link {
     position: relative;
     padding: 24px 4px;
-    border-radius: 4px;
-    outline: 1px solid transparent;
-    transition: outline-color 0.2s, color 0.2s, opacity 0.2s;
+    border-radius: 4px;    
+    transition: outline 0.2s, color 0.2s, opacity 0.2s;
 
     &::after {
       content: '';
@@ -56,8 +55,8 @@
     }
 
     &:focus {
-      outline-color: $orange;
-
+      outline: 1px solid $orange;
+      
       &::after {
         background-color: $orange;
       }
