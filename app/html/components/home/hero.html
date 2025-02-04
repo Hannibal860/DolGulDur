@@ -1,0 +1,80 @@
+<section class="hero">
+  <div class="hero__background">
+    <div class="hero__background-item" style="background-image: url('images/hero/img3.jpg');"></div>
+    <div class="hero__background-item" style="background-image: url('images/hero/img2.jpg');"></div>
+    <div class="hero__background-item" style="background-image: url('images/hero/img.jpg');"></div>
+  </div>
+  <div class="container hero__container">
+    <div class="hero__content">
+      <h1 class="hero__title">
+        author's forge where your sites are created
+      </h1>
+      <button class="button" type="button" data-modal-open>
+        Go to order
+      </button>
+
+      <div class="backdrop is-hidden" data-modal>
+
+        <div class="modal">
+
+          <form class="order-form" action="">
+
+            <h2 class="order-form__title">
+              Tell about yourself and we will contact you
+            </h2>
+            <label class="order-form__label" for="name">
+              Name
+              <input class="order-form__input" type="text" name="name" id="name" required>
+              <svg class="icon order-form__icon" width="18" height="18">
+                <use xlink:href="images/sprite.svg#icon-person"></use>
+              </svg>
+            </label>
+            <label class="order-form__label" for="tel">
+              Phone
+              <input class="order-form__input" type="tel" name="tel" id="tel" required>
+              <svg class="icon order-form__icon" width="18" height="18">
+                <use xlink:href="images/sprite.svg#icon-phone"></use>
+              </svg>
+            </label>
+            <label class="order-form__label" for="email">
+              Email
+              <input class="order-form__input" type="email" name="email" id="email" required>
+              <svg class="icon order-form__icon" width="18" height="18">
+                <use xlink:href="images/sprite.svg#icon-email"></use>
+              </svg>
+            </label>
+            <label class="order-form__label order-form__label--textarea" for="textarea">
+              Message
+              <textarea class="order-form__input order-form__input--textarea" type="textarea" name="textarea"
+                id="textarea" placeholder="Your message..." required></textarea>
+            </label>
+            <label class="order-form__checkbox-label" for="checkbox">
+              <input class="order-form__checkbox" type="checkbox" name="checkbox" id="checkbox">
+              <span class="order-form__checkbox-fake"></span>
+              I agree to the subscription and accept the
+              <a class="order-form__terms" href="#">
+                Terms of use
+              </a>
+            </label>
+
+            <button class="button" type="submit">
+              Submit
+            </button>
+
+            <button class="close-button" type="button" data-modal-close>
+              <span class="sr-only">
+                Close order form
+              </span>
+              <svg class="user-contacts__icon icon" width="18" height="18">
+                <use xlink:href="images/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
