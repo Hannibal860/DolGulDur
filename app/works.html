@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web studio DolGulDur</title>
+  <title>Our Works | Web studio DolGulDur</title>
   <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="images/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
-  <link rel="manifest" href="images/favicon/site.webmanifest" />
+<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+<link rel="shortcut icon" href="images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="images/favicon/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+  rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
+
 
 <body>
   <header class="header">
   <div class="header__container container">
     <nav class="menu">
       <a class="logo" href="#">
-        <img class="logo__img" src="./images/icons/logo.svg" alt="logo" width="189" height="36">
+        <img class="logo__img" src="./images/icons/logo.svg" alt="logo">
       </a>
       <ul class="menu__list">
         <li class="menu__item">
@@ -54,7 +56,64 @@
         </a>
       </li>
     </ul>
+    <button class="header__burger-button" type="button" data-menu-button>
+      <span class="header__burger-line"></span>
+    </button>
   </div>
+</header>
+
+<header class="header-mobile" data-menu>  
+    <nav class="header-mobile__menu">
+      <ul class="header-mobile__menu-list">
+        <li class="header-mobile__menu-item">
+          <a class="header-mobile__menu-link" href="index.html">
+            Home
+          </a>
+        </li>
+        <li class="header-mobile__menu-item">
+          <a class="header-mobile__menu-link" href="works.html">
+            Our Works
+          </a>
+        </li>
+        <li class="header-mobile__menu-item">
+          <a class="header-mobile__menu-link" href="">
+            Contacts
+          </a>
+        </li>
+      </ul>
+      <ul class="header-mobile__contacts-list">
+        <li class="header-mobile__contacts-item header-mobile__contacts-item--tel">
+          <a class="header-mobile__contacts-link" href="tel:+380961111111">+38 096 111 11 11</a>
+        </li>
+        <li class="header-mobile__contacts-item header-mobile__contacts-item--email">
+          <a class="header-mobile__contacts-link" href="mailto:info@dolguldur.com">info@dolguldur.com</a>
+        </li>
+        <li class="header-mobile__contacts-item">
+          <ul class="header-mobile__social-list">
+            <li class="header-mobile__social-item">
+              <a class="header-mobile__social-link" href="">
+                Instagram
+              </a>
+            </li>
+            <li class="header-mobile__social-item">
+              <a class="header-mobile__social-link" href="">
+                Twitter
+              </a>
+            </li>
+            <li class="header-mobile__social-item">
+              <a class="header-mobile__social-link" href="">
+                Facebook
+              </a>
+            </li>
+            <li class="header-mobile__social-item">
+              <a class="header-mobile__social-link" href="">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>    
 </header>
 
   <main class="main">
@@ -285,9 +344,9 @@
 
   <footer class="footer">
   <div class="container footer__container">
-    <div class="footer__left">
+    <div class="footer__contacts-info">
       <a class="logo logo--white footer__logo" href="#">
-        <img src="images/icons/logo-white.svg" alt="logo" class="footer__img" width="140" height="25">
+        <img src="images/icons/logo-white.svg" alt="logo" class="logo__img" width="140" height="25">
       </a>
       <address class="footer__contacts">
         <ul class="footer__list">
@@ -310,7 +369,7 @@
       </address>
     </div>
     <div class="footer__join">
-      <span class="footer__join-text">
+      <span class="footer__act">
         join
       </span>
       <ul class="social social--dark">
@@ -355,7 +414,23 @@
           </a>
         </li>
       </ul>
-    </div>
+    </div>    
+    <form class="footer__form" action="#">
+      <span class="footer__act">
+        subscribe
+      </span>
+      <div class="footer__form-wrapper">
+      <label class="footer__label" for="footer-email">
+        <input class="footer__input" type="email" name="footer-email" id="footer-email" placeholder="E-mail">
+      </label>
+      <button class="button footer__button" type="submit">
+        Subscribe
+        <svg class="icon footer__button-icon" width="24" height="24">
+          <use xlink:href="images/sprite.svg#icon-leaf"></use>
+        </svg>
+      </button>
+      </div>
+    </form>
   </div>
 </footer>
 

@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web studio DolGulDur</title>
   <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="images/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
-  <link rel="manifest" href="images/favicon/site.webmanifest" />
+<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+<link rel="shortcut icon" href="images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="images/favicon/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+  rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
+
+
 
 <body>
   <header class="header">
   <div class="header__container container">
     <nav class="menu">
       <a class="logo" href="#">
-        <img class="logo__img" src="./images/icons/logo.svg" alt="logo" width="189" height="36">
+        <img class="logo__img" src="./images/icons/logo.svg" alt="logo">
       </a>
       <ul class="menu__list">
         <li class="menu__item">
@@ -54,9 +57,66 @@
         </a>
       </li>
     </ul>
+    <button class="header__burger-button" type="button" data-menu-button>
+      <span class="header__burger-line"></span>
+    </button>
   </div>
 </header>
 
+<header class="header-mobile" data-menu>  
+    <nav class="header-mobile__menu">
+      <ul class="header-mobile__menu-list">
+        <li class="header-mobile__menu-item">
+          <a class="header-mobile__menu-link" href="index.html">
+            Home
+          </a>
+        </li>
+        <li class="header-mobile__menu-item">
+          <a class="header-mobile__menu-link" href="works.html">
+            Our Works
+          </a>
+        </li>
+        <li class="header-mobile__menu-item">
+          <a class="header-mobile__menu-link" href="">
+            Contacts
+          </a>
+        </li>
+      </ul>
+      <ul class="header-mobile__contacts-list">
+        <li class="header-mobile__contacts-item header-mobile__contacts-item--tel">
+          <a class="header-mobile__contacts-link" href="tel:+380961111111">+38 096 111 11 11</a>
+        </li>
+        <li class="header-mobile__contacts-item header-mobile__contacts-item--email">
+          <a class="header-mobile__contacts-link" href="mailto:info@dolguldur.com">info@dolguldur.com</a>
+        </li>
+        <li class="header-mobile__contacts-item">
+          <ul class="header-mobile__social-list">
+            <li class="header-mobile__social-item">
+              <a class="header-mobile__social-link" href="">
+                Instagram
+              </a>
+            </li>
+            <li class="header-mobile__social-item">
+              <a class="header-mobile__social-link" href="">
+                Twitter
+              </a>
+            </li>
+            <li class="header-mobile__social-item">
+              <a class="header-mobile__social-link" href="">
+                Facebook
+              </a>
+            </li>
+            <li class="header-mobile__social-item">
+              <a class="header-mobile__social-link" href="">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>    
+</header>
+ 
   <main class="main">
     <section class="hero">
   <div class="hero__background">
@@ -111,25 +171,26 @@
             <label class="order-form__checkbox-label" for="checkbox">
               <input class="order-form__checkbox" type="checkbox" name="checkbox" id="checkbox">
               <span class="order-form__checkbox-fake"></span>
-              I agree to the subscription and accept the
-              <a class="order-form__terms" href="#">
-                Terms of use
-              </a>
+              <span class="order-form__checkbox-text">
+                I agree to the subscription and accept the
+                <a class="order-form__link" href="#">
+                  Terms of use
+                </a>
+              </span>              
             </label>
-
             <button class="button" type="submit">
               Submit
             </button>
-
-            <button class="close-button" type="button" data-modal-close>
-              <span class="sr-only">
-                Close order form
-              </span>
-              <svg class="user-contacts__icon icon" width="18" height="18">
-                <use xlink:href="images/sprite.svg#icon-cross"></use>
-              </svg>
-            </button>
           </form>
+
+          <button class="close-button" type="button" data-modal-close>
+            <span class="sr-only">
+              Close order form
+            </span>
+            <svg class="user-contacts__icon icon" width="18" height="18">
+              <use xlink:href="images/sprite.svg#icon-cross"></use>
+            </svg>
+          </button>
 
         </div>
 
@@ -137,7 +198,7 @@
 
     </div>
   </div>
-</section>
+</section>   
     <section class="qualities section">
   <h2 class="sr-only">
     Our qualities
@@ -199,6 +260,7 @@
     </ul>
   </div>
 </section>
+    <!--
     <section class="services section">
   <div class="container">
     <h2 class="title">
@@ -518,84 +580,10 @@
       </li>
     </ul>
   </div>
-</section>
+</section>-->
   </main>
 
-  <footer class="footer">
-  <div class="container footer__container">
-    <div class="footer__left">
-      <a class="logo logo--white footer__logo" href="#">
-        <img src="images/icons/logo-white.svg" alt="logo" class="footer__img" width="140" height="25">
-      </a>
-      <address class="footer__contacts">
-        <ul class="footer__list">
-          <li class="footer__item">
-            <p class="footer__address">
-              14 Green St., Belmont, Boston. USA
-            </p>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="mailto:webdev@gmail.com">
-              info@dolguldur.com
-            </a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="tel:+380503223232">
-              +38 099 111 11 11
-            </a>
-          </li>
-        </ul>
-      </address>
-    </div>
-    <div class="footer__join">
-      <span class="footer__join-text">
-        join
-      </span>
-      <ul class="social social--dark">
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="sr-only">
-              go to DolGulDur studio's Instagram
-            </span>
-            <svg class="icon" width="20" height="20">
-              <use xlink:href="images/sprite.svg#icon-insta"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="sr-only">
-              go to Twitter
-            </span>
-            <svg class="icon" width="20" height="20">
-              <use xlink:href="images/sprite.svg#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="sr-only">
-              go to Facebook
-            </span>
-            <svg class="icon" width="20" height="20">
-              <use xlink:href="images/sprite.svg#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="sr-only">
-              go to Linkedin
-            </span>
-            <svg class="icon" width="20" height="20">
-              <use xlink:href="images/sprite.svg#icon-linkedin"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</footer>
+  
 
   <script src="js/main.min.js"></script>
 </body>

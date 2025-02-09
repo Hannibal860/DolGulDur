@@ -1,109 +1,282 @@
-.header {
-  border-bottom: 1px solid #ECECEC;
+.header-mobile {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  padding: 50px 40px 38px;
+  transform: translateY(-200%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $white;
 
-  &__container {
-    height: 80px;
-    display: flex;
-    align-items: center;
-  }
-}
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  color: $dark;
-
-  &__list {
-    display: flex;
-    gap: 50px;
+  &.is-open {
+    transform: translateY(0);
+    z-index: 3;
   }
 
-  &__link {
-    position: relative;
-    display: inline-block;
-    padding: 24px 4px;
-    border-radius: 4px;    
-    transition: outline 0.2s, color 0.2s, opacity 0.2s;
+  &__menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-    &::after {
-      content: '';
-      width: 100%;
-      height: 4px;
-      border-radius: 2px;
-      background-color: transparent;
-      bottom: -8px;
-      left: 0;
-      position: absolute;
-      transition: background-color 0.2s;
-    }
+  &__menu-list {
+    font-size: 40px;
+    gap: 33px;
+  }
 
-    &.current {
-      color: $orange;
-
-      &::after {
-        background-color: $orange;
-      }
-    }
-
-    &:hover {
-      color: $orange;
-
-      &::after {
-        background-color: $orange;
-      }
-    }
+  &__menu-link {
+    width: 100%;
 
     &:focus {
-      outline: 1px solid $orange;
-      
-      &::after {
-        background-color: $orange;
-      }
+      color: $orange;
     }
 
     &:active {
       color: $orange;
-      opacity: 0.7;
+    }
+  }
 
-      &::after {
-        background-color: currentColor;
+  &__contacts-item {
+
+    &--email {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__contacts-link {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 32px;
+    color: $grey;
+
+    &:focus {
+      color: $orange;
+    }
+
+    &:active {
+      color: $orange;
+    }
+  }
+
+  &__social-link {
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 500;
+    color: $orange;
+    padding: 12px 0;
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 20px;
+  }
+
+  @media(min-width: 768px) {
+    display: none;
+  }
+}
+
+.header {
+  border-bottom: 1px solid #ECECEC;
+  display: block;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+
+    @media(min-width: 1200px) {
+      height: 80px;
+    }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 82px;
+    color: $dark;
+ 
+    &__list {
+      display: none;
+
+      @media(min-width: 768px) {
+        display: flex;
+        gap: 46px;
       }
     }
+
+    &__link {
+      @media(min-width: 768px) {
+        position: relative;
+        display: inline-block;
+        padding: 18px 4px;
+        border-radius: 4px;
+        transition: outline 0.2s, color 0.2s, opacity 0.2s;
+
+        &::after {
+          content: '';
+          width: 100%;
+          height: 4px;
+          border-radius: 2px;
+          background-color: transparent;
+          bottom: -4px;        
+          left: 0;
+          position: absolute;
+          transition: background-color 0.2s;
+
+          @media(min-width: 1200px) {
+            bottom: -5px;
+          }
+        }
+
+        &.current {
+          color: $orange;
+
+          &::after {
+            background-color: $orange;
+          }
+        }
+
+        &:hover {
+          color: $orange;
+
+          &::after {
+            background-color: $orange;
+          }
+        }
+
+        &:focus {
+          outline: 1px solid $orange;
+
+          &::after {
+            background-color: $orange;
+          }
+        }
+
+        &:active {
+          color: $orange;
+          opacity: 0.7;
+
+          &::after {
+            background-color: currentColor;
+          }
+        }
+      }
+
+      @media(min-width: 1200px) {
+        padding: 27px 4px;
+      }
+    }
+  }
+
+  &__burger-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    z-index: 4;
+    transition: transform 0.2s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 26px;
+      height: 3px;
+      background-color: $grey;
+      border-radius: 3px;
+      left: 9px;
+      top: 13px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 26px;
+      height: 3px;
+      background-color: $grey;
+      border-radius: 3px;
+      left: 9px;
+      bottom: 13px;
+    }
+
+    &.is-open {
+      .header__burger-line {
+        opacity: 0;
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+        top: 19px;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        top: 19px;
+      }
+    }
+
+    @media(min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__burger-line {
+    width: 26px;
+    height: 3px;
+    background-color: $grey;
+    border-radius: 3px;
   }
 }
 
 .user-contacts {
-  margin-left: auto;
-  color: $grey;
-  font-size: 14px;
-  display: flex;
-  justify-content: end;
-  gap: 55px;
+  display: none;
+
+  @media(min-width: 768px) {
+    display: flex;
+    margin-left: auto;
+    flex-direction: column;
+    color: $grey;
+    font-size: 14px;
+    justify-content: end;
+    gap: 2px;
+  }
+
+  @media(min-width: 1200px) {
+    flex-direction: row;
+    gap: 55px;
+  }
 
   &__link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 4px;
-    border-radius: 4px;
-    outline: 1px solid transparent;
-    transition: outline-color 0.2s, color 0.2s, opacity 0.2s;
+    @media(min-width: 768px) {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 4px;
+      border-radius: 4px;
+      outline: 1px solid transparent;
+      transition: outline-color 0.2s, color 0.2s, opacity 0.2s;
 
-    &:hover {
-      color: $orange;
-    }
+      &:hover {
+        color: $orange;
+      }
 
-    &:focus {
-      outline-color: $orange;
-      color: currentColor;
-    }
+      &:focus {
+        outline-color: $orange;
+        color: currentColor;
+      }
 
-    &:active {
-      color: $orange;
-      opacity: 0.7;
+      &:active {
+        color: $orange;
+        opacity: 0.7;
+      }
     }
   }
 }
-

@@ -67,6 +67,7 @@ button {
   cursor: pointer;
   border: none;
   background-color: transparent;
+  color: inherit;
 }
 
 button, 
@@ -78,7 +79,7 @@ textarea {
 
 input,
 textarea {
-  border-color: transparent;
+  border-color: none;
 }
 
 h1,
@@ -87,9 +88,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: inherit;
+  font: inherit;
 }
 
 textarea {
   resize: none;
+}
+
+input,
+textarea {
+  background-color: inherit;
+  border: none;
 }

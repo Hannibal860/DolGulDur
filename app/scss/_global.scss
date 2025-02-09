@@ -17,8 +17,6 @@ body {
 .logo {
   transition: outline 0.2s;
 
-  &:hover {}
-
   &:focus {
     outline: 1px solid rgba($orange, 0.8);
   }
@@ -26,189 +24,15 @@ body {
   &:active {
     outline: 1px solid $orange;
   }
-}
 
-.backdrop {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(2px);
-  z-index: 10;
-  opacity: 1;
-  transition: opacity 0.3s;
+  &__img {
+    width: 140px;
+    height: 30px;
 
-  &.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-
-    .modal {
-      transform: scale(0);
+    @media(min-width: 1200px) {
+      width: 189px;
+      height: 36px;
     }
-  }
-}
-
-.modal {
-  max-width: 528px;
-  width: 100%;
-  background-color: $white;
-  box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
-  position: relative;
-  transform: scale(1);
-  color: $dark;
-  padding: 40px;
-  border-radius: 6px;
-  transition: transform 0.3s;
-}
-
-.order-form {
-  &__title {
-    font-size: 20px;
-    margin-bottom: 11px;
-  }
-
-  &__label {
-    display: block;
-    text-align: left;
-    color: $grey;
-    font-size: 12px;
-    margin-bottom: 10px;
-    position: relative;
-
-    &--textarea {
-      margin-bottom: 20px;
-    }
-  }
-
-  &__input {
-    display: block;
-    width: 100%;
-    padding: 11px 12px 11px 34px;
-    margin-top: 4px;
-    border-radius: 4px;
-    outline: 1px solid rgba($grey, 0.2);
-    transition: outline-color 0.2s, color 0.2s;
-
-    &:hover {
-      outline-color: rgba($black, 0.2);
-
-      &+.order-form__icon {
-        color: rgba($orange, 0.7);
-      }
-    }
-
-    &:focus {
-      outline-color: $orange;
-
-      &+.order-form__icon {
-        color: $orange;
-      }
-    }
-
-    &--textarea {
-      height: 120px;
-      padding-left: 11px;
-    }
-  }
-
-  &__icon {
-    position: absolute;
-    left: 12px;
-    bottom: 12px;
-  }
-
-  &__checkbox-label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-
-  &__checkbox {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  &__checkbox-fake {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 16px;
-    height: 16px;
-    border: 1px solid $black;
-    border-radius: 2px;
-    margin-right: 7px;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url('../images/icons/checkbox.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 9px;
-      height: 7px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  &__checkbox:checked+&__checkbox-fake {
-    background-color: $orange;
-    border-color: transparent;
-  }
-
-  &__terms {
-    color: $orange;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    padding: 0 3px;
-    margin-left: 1px;
-    text-decoration: underline;
-    transition: opacity 0.2s, border-color 0.2s;
-
-    &:hover {
-      opacity: 0.7;
-    }
-
-    &:focus {
-      border-color: $orange;
-    }
-  }
-}
-
-.close-button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
-
-  &:hover {
-    color: $orange;
-  }
-
-  &:focus {
-    border-color: $orange;
-  }
-
-  &:active {
-    box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.12);
-    color: $orange;
   }
 }
 
@@ -250,49 +74,4 @@ body {
   color: $dark;
   font-weight: 400;
   font-size: 36px;
-}
-
-.social {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-
-  &--dark {
-    .social__link {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: $white;
-    }
-  }
-
-  &__link {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $grey;
-    outline: 1px solid transparent;
-    outline-offset: 4px;
-    transition: outline-color 0.2s, box-shadow 0.2s, color 0.2s, background-color 0.2s;
-
-    .icon {
-      transition: color 0.2s;
-    }
-
-    &:hover {
-      background-color: $orange;
-      color: $white;
-    }
-
-    &:focus {
-      outline-color: $orange;
-    }
-
-    &:active {
-      background-color: $orange;
-      color: $white;
-      box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.4);
-    }
-  }
 }
