@@ -100,7 +100,7 @@
     align-items: center;
     gap: 82px;
     color: $dark;
- 
+
     &__list {
       display: none;
 
@@ -124,7 +124,7 @@
           height: 4px;
           border-radius: 2px;
           background-color: transparent;
-          bottom: -4px;        
+          bottom: -4px;
           left: 0;
           position: absolute;
           transition: background-color 0.2s;
@@ -181,16 +181,31 @@
     align-items: center;
     width: 44px;
     height: 44px;
+    border-radius: 6px;
+    color: $grey;
     position: relative;
     z-index: 4;
-    transition: transform 0.2s;
+    transition: transform 0.2s, color 0.2s, background-color 0.2s;
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:focus {
+      color: $grey;
+      outline: 1px solid $orange;
+    }
+
+    &:active {
+      box-shadow: inset 3px 3px 3px rgba($black, 0.12);
+    }
 
     &::before {
       content: '';
       position: absolute;
       width: 26px;
       height: 3px;
-      background-color: $grey;
+      background-color: currentColor;
       border-radius: 3px;
       left: 9px;
       top: 13px;
@@ -201,13 +216,30 @@
       position: absolute;
       width: 26px;
       height: 3px;
-      background-color: $grey;
+      background-color: currentColor;
       border-radius: 3px;
       left: 9px;
       bottom: 13px;
     }
 
     &.is-open {
+      outline: 1px solid transparent;
+      border-radius: 50%;
+      transition: outline-color 0.2s, color 0.2s;
+
+      &:hover {
+        outline: 1px solid rgba($black, 0.1);
+      }
+
+      &:focus {
+        outline: 1px solid $orange;
+        color: $black;
+      }
+
+      &:active {
+        box-shadow: inset 3px 3px 3px rgba($black, 0.12);
+      }
+
       .header__burger-line {
         opacity: 0;
       }
@@ -231,7 +263,7 @@
   &__burger-line {
     width: 26px;
     height: 3px;
-    background-color: $grey;
+    background-color: currentColor;
     border-radius: 3px;
   }
 }
@@ -251,7 +283,8 @@
 
   @media(min-width: 1200px) {
     flex-direction: row;
-    gap: 55px;
+    justify-content: flex-end;
+    gap: 45px;
   }
 
   &__link {

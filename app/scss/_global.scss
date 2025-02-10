@@ -41,7 +41,11 @@ body {
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media(min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 
 .button {
@@ -70,8 +74,13 @@ body {
 }
 
 .title {
-  margin-bottom: 49px;
+  margin-bottom: 30px;  
   color: $dark;
   font-weight: 400;
+  font-size: 28px;
+
+  @media(min-width: 1200px) {
+  margin-bottom: 49px;
   font-size: 36px;
+  }
 }
