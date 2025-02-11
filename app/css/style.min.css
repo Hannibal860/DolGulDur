@@ -699,11 +699,16 @@ body {
 }
 .hero__title {
   font-size: 24px;
-  max-width: 82%;
+  max-width: 52%;
   margin: 0 auto 38px;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.36;
+}
+@media (min-width: 1200px) {
+  .hero__title {
+    max-width: 82%;
+  }
 }
 @media (min-width: 1200px) {
   .hero__title {
@@ -724,7 +729,17 @@ body {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 30px;
+  gap: 33px;
+}
+@media (min-width: 768px) {
+  .qualities__list {
+    gap: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  .qualities__list {
+    gap: 30px;
+  }
 }
 .qualities__item {
   max-width: 450px;
@@ -778,7 +793,7 @@ body {
 @media (min-width: 1200px) {
   .services {
     display: block;
-    padding-top: 0;
+    padding-top: 39px;
     text-align: center;
   }
   .services__list {
@@ -823,7 +838,12 @@ body {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 30px;
+  gap: 24px;
+}
+@media (min-width: 1200px) {
+  .team__list {
+    gap: 30px;
+  }
 }
 .team__item {
   max-width: 450px;
@@ -898,6 +918,11 @@ body {
 .partners {
   text-align: center;
   padding: 60px 0;
+}
+@media (min-width: 768px) {
+  .partners {
+    padding: 58px 0;
+  }
 }
 @media (min-width: 1200px) {
   .partners {
@@ -1248,7 +1273,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 42px;
+  gap: 53px;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1262,7 +1287,7 @@ body {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 59px;
+    gap: 48px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -1294,7 +1319,7 @@ body {
 }
 @media (min-width: 1200px) {
   .footer__logo {
-    margin-bottom: 22px;
+    margin-bottom: 16px;
   }
 }
 .footer__logo-img {
@@ -1315,7 +1340,7 @@ body {
 }
 @media (min-width: 1200px) {
   .footer__item:not(:last-child) {
-    margin-bottom: 4px;
+    margin-bottom: 0;
   }
 }
 .footer__link {
@@ -1325,6 +1350,12 @@ body {
   border-radius: 4px;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
+}
+@media (min-width: 1200px) {
+  .footer__link {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 .footer__link:hover {
   color: #F29040;
@@ -1338,16 +1369,11 @@ body {
 .footer__join {
   max-width: 206px;
   width: 100%;
-  padding-top: 8px;
-}
-@media (min-width: 768px) {
-  .footer__join {
-    padding-top: 0;
-  }
 }
 @media (min-width: 1200px) {
   .footer__join {
     margin-right: 93px;
+    padding-top: 8px;
   }
 }
 .footer__act {
@@ -1355,16 +1381,12 @@ body {
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 19px;
+  line-height: 1.185;
 }
 .footer__form {
   max-width: 570px;
   width: 100%;
   padding-top: 8px;
-}
-@media (min-width: 768px) {
-  .footer__form {
-    padding-top: 0;
-  }
 }
 .footer__form-wrapper {
   display: -webkit-box;
@@ -1379,13 +1401,14 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 450px;
-  gap: 20px;
+  gap: 24px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 @media (min-width: 768px) {
   .footer__form-wrapper {
+    gap: 24px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1485,13 +1508,22 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 @media (min-width: 768px) {
   .gallery__filter {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 31px;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery__filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
   }
 }
 .gallery__filter-button {
@@ -1534,9 +1566,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
@@ -1608,6 +1640,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 14px;
   padding: 20px 24px;
   border: 1px solid grey;
   border-top: 0;
