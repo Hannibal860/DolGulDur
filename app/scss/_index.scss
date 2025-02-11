@@ -56,19 +56,16 @@
 
   &__title {
     font-size: 24px;
-    max-width: 52%;
+    max-width: 368px;
     margin: 0 auto 38px;
     text-transform: uppercase;
     font-weight: 700;
     line-height: 1.36;
+    margin-bottom: 30px;
 
     @media(min-width: 1200px) {
+      font-size: 44px;      
       max-width: 82%;
-    }
-
-    @media(min-width: 1200px) {
-      font-size: 44px;
-      margin-bottom: 30px;
     }
   }
 }
@@ -245,8 +242,8 @@
   padding: 60px 0;
 
   @media(min-width: 768px) {
-      padding: 58px 0;
-    }
+    padding: 58px 0;
+  }
 
   @media(min-width: 1200px) {
     padding: 94px 0;

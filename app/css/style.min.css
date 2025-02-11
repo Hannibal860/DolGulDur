@@ -699,21 +699,17 @@ body {
 }
 .hero__title {
   font-size: 24px;
-  max-width: 52%;
+  max-width: 368px;
   margin: 0 auto 38px;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.36;
-}
-@media (min-width: 1200px) {
-  .hero__title {
-    max-width: 82%;
-  }
+  margin-bottom: 30px;
 }
 @media (min-width: 1200px) {
   .hero__title {
     font-size: 44px;
-    margin-bottom: 30px;
+    max-width: 82%;
   }
 }
 
@@ -1566,9 +1562,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
