@@ -1,84 +1,3 @@
-.header-mobile {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  padding: 50px 40px 38px;
-  transform: translateY(-200%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: $white;
-
-  &.is-open {
-    transform: translateY(0);
-    z-index: 3;
-  }
-
-  &__menu {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  &__menu-list {
-    font-size: 40px;
-    gap: 33px;
-  }
-
-  &__menu-link {
-    width: 100%;
-
-    &:focus {
-      color: $orange;
-    }
-
-    &:active {
-      color: $orange;
-    }
-  }
-
-  &__contacts-item {
-
-    &--email {
-      margin-bottom: 23px;
-    }
-  }
-
-  &__contacts-link {
-    width: 100%;
-    padding: 15px 0;
-    font-size: 32px;
-    color: $grey;
-
-    &:focus {
-      color: $orange;
-    }
-
-    &:active {
-      color: $orange;
-    }
-  }
-
-  &__social-link {
-    font-family: 'Roboto';
-    font-size: 18px;
-    font-weight: 500;
-    color: $orange;
-    padding: 12px 0;
-  }
-
-  &__social-list {
-    display: flex;
-    gap: 20px;
-  }
-
-  @media(min-width: 768px) {
-    display: none;
-  }
-}
-
 .header {
   border-bottom: 1px solid #ECECEC;
   display: block;
@@ -89,88 +8,132 @@
     height: 60px;
     align-items: center;
 
-    @media(min-width: 1200px) {
+    @media(min-width: 768px) {
       height: 80px;
     }
   }
+}
 
-  .menu {
+.mobile-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: 768px) and (orientation: portrait) {
+    display: none;
+  }
+
+  @media (min-width: 768px) and (orientation: landscape) {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 82px;
-    color: $dark;
+  }
 
-    &__list {
-      display: none;
+  @media (min-width: 1024px) and (orientation: landscape) {
+    display: none;
+  }
 
-      @media(min-width: 768px) {
-        display: flex;
-        gap: 46px;
-      }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transform: translateY(-200%);
+    padding: 34px 40px 38px;
+    background-color: $white;
+    transition: transform 0.3s;
+
+    &.is-open {
+      transform: translateY(0);
+      z-index: 3;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    margin-bottom: auto;
+  }
+
+  &__link {
+    width: 100%;
+    padding: 16px 0;
+
+    &:focus {
+      color: $orange;
     }
 
-    &__link {
-      @media(min-width: 768px) {
-        position: relative;
-        display: inline-block;
-        padding: 18px 4px;
-        border-radius: 4px;
-        transition: outline 0.2s, color 0.2s, opacity 0.2s;
+    &:active {
+      color: rgba($orange, 0.7);
+    }
+  }
 
-        &::after {
-          content: '';
-          width: 100%;
-          height: 4px;
-          border-radius: 2px;
-          background-color: transparent;
-          bottom: -4px;
-          left: 0;
-          position: absolute;
-          transition: background-color 0.2s;
+  &__contacts-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 23px;
+  }
 
-          @media(min-width: 1200px) {
-            bottom: -5px;
-          }
-        }
+  &__contacts-link {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 28px;
+    color: $grey;
 
-        &.current {
-          color: $orange;
+    @media(min-width: 480px) {
+      font-size: 32px;
+    }
 
-          &::after {
-            background-color: $orange;
-          }
-        }
+    &:focus {
+      color: $orange;
+    }
 
-        &:hover {
-          color: $orange;
+    &:active {
+      color: rgba($orange, 0.7);
+    }
+  }
 
-          &::after {
-            background-color: $orange;
-          }
-        }
+  &__social-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 
-        &:focus {
-          outline: 1px solid $orange;
+  &__social-item:not(:last-child) {
+    position: relative;
 
-          &::after {
-            background-color: $orange;
-          }
-        }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 22px;
+      bottom: 50%;
+      transform: translateY(50%);
+      right: -10px;
+      background-color: rgba($dark, 0.2);
+    }
+  }
 
-        &:active {
-          color: $orange;
-          opacity: 0.7;
+  &__social-link {
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: $orange;
+    padding: 12px 0;
+    font-size: 18px;
+    transition: color 0.2s;
 
-          &::after {
-            background-color: currentColor;
-          }
-        }
-      }
+    &:focus {
+      color: $grey;
+    }
 
-      @media(min-width: 1200px) {
-        padding: 27px 4px;
-      }
+    &:active {
+      color: rgba($orange, 0.7);
     }
   }
 
@@ -185,7 +148,7 @@
     color: $grey;
     position: relative;
     z-index: 4;
-    transition: transform 0.2s, color 0.2s, background-color 0.2s;
+    transition: transform 0.2s, color 0.2s, background-color 0.2s, outline 0.2s, box-shadow 0.2s;
 
     &:hover {
       color: $orange;
@@ -198,6 +161,7 @@
 
     &:active {
       box-shadow: inset 3px 3px 3px rgba($black, 0.12);
+      color: $orange;
     }
 
     &::before {
@@ -240,22 +204,30 @@
         box-shadow: inset 3px 3px 3px rgba($black, 0.12);
       }
 
-      .header__burger-line {
+      .mobile-menu__burger-line {
         opacity: 0;
       }
 
       &::before {
         transform: rotate(-45deg);
-        top: 19px;
+        top: 20px;
       }
 
       &::after {
         transform: rotate(45deg);
-        top: 19px;
+        top: 20px;
       }
     }
 
-    @media(min-width: 768px) {
+    @media (min-width: 768px) and (orientation: portrait) {
+      display: none;
+    }
+
+    @media (min-width: 768px) and (orientation: landscape) {
+      display: flex;
+    }
+
+    @media (min-width: 1024px) and (orientation: landscape) {
       display: none;
     }
   }
@@ -268,23 +240,119 @@
   }
 }
 
-.user-contacts {
+.menu {
   display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 82px;
+  color: $dark;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) and (orientation: portrait) {
     display: flex;
-    margin-left: auto;
-    flex-direction: column;
-    color: $grey;
-    font-size: 14px;
-    justify-content: end;
-    gap: 2px;
   }
 
-  @media(min-width: 1200px) {
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 45px;
+  @media (min-width: 768px) and (orientation: landscape) {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    display: flex;
+  }
+
+  &__list {
+    @media(min-width: 768px) {
+      display: flex;
+      gap: 46px;
+    }
+  }
+
+  &__link {
+    @media(min-width: 768px) {
+      position: relative;
+      display: inline-block;
+      padding: 18px 4px;
+      border-radius: 4px;
+      transition: outline 0.2s, color 0.2s, opacity 0.2s;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: transparent;
+        bottom: -4px;
+        left: 0;
+        position: absolute;
+        transition: background-color 0.2s;
+
+        @media(min-width: 1200px) {
+          bottom: -5px;
+        }
+      }
+
+      &.current {
+        color: $orange;
+
+        &::after {
+          background-color: $orange;
+        }
+      }
+
+      &:hover {
+        color: $orange;
+
+        &::after {
+          background-color: currentColor;
+        }
+      }
+
+      &:focus {
+        outline: 1px solid $orange;
+
+        &::after {
+          background-color: $orange;
+        }
+      }
+
+      &:active {
+        color: $orange;
+        opacity: 0.7;
+
+        &::after {
+          background-color: currentColor;
+        }
+      }
+    }
+
+    @media(min-width: 1200px) {
+      padding: 27px 4px;
+    }
+  }
+}
+
+.user-contacts {
+  display: none;
+  margin-left: auto;
+  color: $grey;
+  font-size: 14px;
+  justify-content: end;
+  gap: 2px;
+
+  @media (min-width: 768px) and (orientation: portrait) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) and (orientation: landscape) {
+    display: none;
+  }
+
+  @media (min-width: 1024px) and (orientation: landscape) {
+    display: flex;
+  }
+
+  @media (min-width: 1200px) {
+    gap: 38px;
   }
 
   &__link {

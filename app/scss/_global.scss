@@ -6,6 +6,10 @@ body {
   font-size: 16px;
   line-height: 1.185;
   letter-spacing: normal;
+
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .container {
@@ -34,6 +38,11 @@ body {
       height: 36px;
     }
   }
+
+  &__img--white {
+    width: 140px;
+    height: 25px;
+  }
 }
 
 .icon {
@@ -52,6 +61,7 @@ body {
   display: inline-block;
   color: $white;
   background-color: $orange;
+  font-weight: 700;
   line-height: 1.875;
   border-radius: 4px;
   letter-spacing: 2.5px;
@@ -71,16 +81,88 @@ body {
   &:active {
     box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.4);
   }
+
+  &__icon {
+    position: absolute;
+    right: 13px;
+  }
 }
 
 .title {
-  margin-bottom: 30px;  
+  margin-bottom: 30px;
   color: $dark;
   font-weight: 400;
   font-size: 28px;
 
   @media(min-width: 1200px) {
-  margin-bottom: 49px;
-  font-size: 36px;
+    margin-bottom: 49px;
+    font-size: 36px;
+  }
+}
+
+.subscribe {
+  max-width: 570px;
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    padding-top: 8px;
+  }
+
+  &__form {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+
+    @media(min-width: 768px) {
+      gap: 24px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media(min-width: 1200px) {
+      flex-direction: row;
+      margin: 0;
+      gap: 12px;
+      justify-content: space-between;
+    }
+  }
+
+  &__input {
+    max-width: 450px;
+    width: 100%;
+    padding: 11px 16px;
+    border-radius: 4px;
+    border: 1px solid rgba($white, 0.3);
+    color: $white;
+    cursor: pointer;
+    transition: color 0.2s, outline 0.2s;
+
+    @media(min-width: 768px) {
+      min-width: 358px;
+      flex-grow: 1;
+    }
+
+    &::placeholder {
+      color: rgba($white, 0.6);
+    }
+
+    &:hover::placeholder {
+      color: $orange;
+    }
+
+    &:focus {
+      outline: 1px solid $orange;
+      outline-offset: 4px;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    padding-left: 39px;
+    padding-right: 57px;
+    position: relative;
   }
 }

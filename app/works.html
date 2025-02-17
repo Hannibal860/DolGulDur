@@ -11,9 +11,9 @@
 <link rel="manifest" href="images/favicon/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
   rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -22,9 +22,79 @@
 <body>
   <header class="header">
   <div class="header__container container">
+
+    <div class="mobile-menu">
+      <a class="logo" href="#">
+        <img class="logo__img" src="./images/icons/logo.svg" alt="logo" width="140" height="30">
+      </a>
+
+      <button class="mobile-menu__burger-button" type="button" data-menu-button>
+        <span class="sr-only">Open / close mobile menu</span>
+        <span class="mobile-menu__burger-line"></span>
+      </button>
+
+      <div class="mobile-menu__wrapper" data-menu>
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="index.html">
+              Home
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="works.html">
+              Our Works
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="">
+              Contacts
+            </a>
+          </li>
+        </ul>
+        <ul class="mobile-menu__contacts-list">
+          <li class="mobile-menu__contacts-item mobile-menu__contacts-item--tel">
+            <a class="mobile-menu__contacts-link" href="tel:+380961111111">
+              +38 096 111 11 11
+            </a>
+          </li>
+          <li class="mobile-menu__contacts-item mobile-menu__contacts-item--email">
+            <a class="mobile-menu__contacts-link" href="mailto:info@dolguldur.com">
+              info@dolguldur.com
+            </a>
+          </li>
+        </ul>
+
+        <ul class="mobile-menu__social-list">
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link" href="">
+              Instagram
+            </a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link" href="">
+              Twitter
+            </a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link" href="">
+              Facebook
+            </a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link" href="">
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+
+        </ul>
+      </div>
+
+    </div>
+
     <nav class="menu">
       <a class="logo" href="#">
-        <img class="logo__img" src="./images/icons/logo.svg" alt="logo">
+        <img class="logo__img" src="./images/icons/logo.svg" alt="logo" width="140" height="30">
       </a>
       <ul class="menu__list">
         <li class="menu__item">
@@ -56,68 +126,8 @@
         </a>
       </li>
     </ul>
-    <button class="header__burger-button" type="button" data-menu-button>
-      <span class="header__burger-line"></span>
-    </button>
-  </div>
-</header>
 
-<header class="header-mobile" data-menu>  
-    <nav class="header-mobile__menu">
-      <ul class="header-mobile__menu-list">
-        <li class="header-mobile__menu-item">
-          <a class="header-mobile__menu-link" href="index.html">
-            Home
-          </a>
-        </li>
-        <li class="header-mobile__menu-item">
-          <a class="header-mobile__menu-link" href="works.html">
-            Our Works
-          </a>
-        </li>
-        <li class="header-mobile__menu-item">
-          <a class="header-mobile__menu-link" href="">
-            Contacts
-          </a>
-        </li>
-      </ul>
-      <ul class="header-mobile__contacts-list">
-        <li class="header-mobile__contacts-item header-mobile__contacts-item--tel">
-          <a class="header-mobile__contacts-link" href="tel:+380961111111">
-            +38 096 111 11 11
-          </a>
-        </li>
-        <li class="header-mobile__contacts-item header-mobile__contacts-item--email">
-          <a class="header-mobile__contacts-link" href="mailto:info@dolguldur.com">
-            info@dolguldur.com
-          </a>
-        </li>
-        <li class="header-mobile__contacts-item">
-          <ul class="header-mobile__social-list">
-            <li class="header-mobile__social-item">
-              <a class="header-mobile__social-link" href="">
-                Instagram
-              </a>
-            </li>
-            <li class="header-mobile__social-item">
-              <a class="header-mobile__social-link" href="">
-                Twitter
-              </a>
-            </li>
-            <li class="header-mobile__social-item">
-              <a class="header-mobile__social-link" href="">
-                Facebook
-              </a>
-            </li>
-            <li class="header-mobile__social-item">
-              <a class="header-mobile__social-link" href="">
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>    
+  </div>
 </header>
 
   <main class="main">
@@ -344,7 +354,7 @@
   <div class="container footer__container">
     <div class="footer__contacts-info">
       <a class="logo logo--white footer__logo" href="#">
-        <img src="images/icons/logo-white.svg" alt="logo" class="logo__img logo__img--white footer__logo-img">
+        <img src="images/icons/logo-white.svg" alt="logo" class="logo__img logo__img--white" width="140" height="25">
       </a>
       <address class="footer__contacts">
         <ul class="footer__list">
@@ -367,7 +377,7 @@
       </address>
     </div>
     <div class="footer__join">
-      <span class="footer__act">
+      <span class="footer__subtitle">
         join
       </span>
       <ul class="social social--dark">
@@ -413,22 +423,24 @@
         </li>
       </ul>
     </div>    
-    <form class="footer__form" action="#">
-      <span class="footer__act">
+    <div class="subscribe">
+      <span class="footer__subtitle">
         subscribe
       </span>
-      <div class="footer__form-wrapper">
-      <label class="footer__label" for="footer-email">
-        <input class="footer__input" type="email" name="footer-email" id="footer-email" placeholder="E-mail">
-      </label>
-      <button class="button footer__button" type="submit">
-        Subscribe
-        <svg class="icon footer__button-icon" width="24" height="24">
-          <use xlink:href="images/sprite.svg#icon-leaf"></use>
-        </svg>
-      </button>
-      </div>
-    </form>
+      <form class="subscribe__form">
+        <label class="sr-only" for="subscribe-email">
+          E-mail
+        </label>
+          <input class="subscribe__input" type="email" name="subscribe-email" id="subscribe-email" placeholder="E-mail" required>
+        
+        <button class="button subscribe__button" type="submit">
+          Subscribe
+          <svg class="icon button__icon" width="24" height="24">
+            <use xlink:href="images/sprite.svg#icon-leaf"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
   </div>
 </footer>
 
