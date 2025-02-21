@@ -200,12 +200,10 @@
 
     @media(min-width: 768px) {
       max-width: 354px;
-      width: calc((100% - 1 * 35px) / 2);
     }
 
     @media(min-width: 1200px) {
       max-width: 270px;
-      width: calc((100% - 3 * 30px) / 4);
     }
   }
 
