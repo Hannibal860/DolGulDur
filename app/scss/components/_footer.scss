@@ -125,6 +125,11 @@
     @media (min-width: 1024px) {
       padding-top: 8px;
       max-width: 570px;
+      margin: 0 24px;
+    }
+
+    @media (min-width: 1200px) {
+      margin: 0;
     }
   }
 

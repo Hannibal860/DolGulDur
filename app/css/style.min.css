@@ -600,6 +600,8 @@ body.lock {
 @media (orientation: landscape) {
   .mobile-menu {
     padding: 15px 40px 15px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 @media (min-width: 768px) {
@@ -639,11 +641,6 @@ body.lock {
 .mobile-menu__link {
   width: 100%;
   padding: 8px 0;
-}
-@media (orientation: landscape) {
-  .mobile-menu__link {
-    padding: 0;
-  }
 }
 @media (min-width: 320px) and (orientation: portrait) {
   .mobile-menu__link {
@@ -702,6 +699,20 @@ body.lock {
       flex-wrap: wrap;
   gap: 0 20px;
 }
+@media (orientation: landscape) {
+  .mobile-menu__social-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: auto;
+  }
+}
+@media (orientation: landscape) {
+  .mobile-menu__social-item {
+    text-align: right;
+  }
+}
 .mobile-menu__social-item:not(:last-child) {
   position: relative;
 }
@@ -717,6 +728,23 @@ body.lock {
   right: -10px;
   background-color: rgba(33, 33, 33, 0.2);
 }
+.mobile-menu__social-item:last-child {
+  position: relative;
+}
+@media (orientation: landscape) {
+  .mobile-menu__social-item:last-child::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 22px;
+    bottom: 50%;
+    -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+            transform: translateY(50%);
+    right: -10px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}
 .mobile-menu__social-link {
   font-family: "Roboto", serif;
   font-weight: 500;
@@ -726,6 +754,11 @@ body.lock {
   font-size: 18px;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
+}
+@media (orientation: landscape) {
+  .mobile-menu__social-link {
+    width: 100%;
+  }
 }
 .mobile-menu__social-link:focus {
   color: #757575;
@@ -1577,6 +1610,12 @@ body.lock {
   .footer__subscribe {
     padding-top: 8px;
     max-width: 570px;
+    margin: 0 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__subscribe {
+    margin: 0;
   }
 }
 .footer__subtitle {
