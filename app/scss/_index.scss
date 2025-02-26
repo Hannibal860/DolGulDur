@@ -257,7 +257,6 @@
 
   &__item {
     width: calc((100% - 1 * 30px) / 2);
-    max-width: 226px;
 
     @media(min-width: 768px) {      
       width: calc((100% - 2 * 30px) / 3);

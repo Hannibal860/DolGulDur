@@ -28,60 +28,26 @@
       <span class="footer__subtitle">
         join
       </span>
-      <ul class="social social--dark">
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="sr-only">
-              go to DolGulDur studio's Instagram
-            </span>
-            <svg class="icon" width="20" height="20">
-              <use xlink:href="images/sprite.svg#icon-insta"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="sr-only">
-              go to Twitter
-            </span>
-            <svg class="icon" width="20" height="20">
-              <use xlink:href="images/sprite.svg#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="sr-only">
-              go to Facebook
-            </span>
-            <svg class="icon" width="20" height="20">
-              <use xlink:href="images/sprite.svg#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="sr-only">
-              go to Linkedin
-            </span>
-            <svg class="icon" width="20" height="20">
-              <use xlink:href="images/sprite.svg#icon-linkedin"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      @@include('social.html', {
+        "socialClass": "social--dark",
+        "name": "",
+        "instagramHref": "",
+        "twitterHref": "",
+        "facebookHref": "",
+        "linkedinHref": "",
+      })
     </div>    
     <div class="footer__subscribe">
       <span class="footer__subtitle">
         subscribe
       </span>
-      <form class="subscribe__form">
+      <form class="subscribe-form">
         <label class="sr-only" for="subscribe-email">
           E-mail
         </label>
-          <input class="subscribe__input" type="email" name="subscribe-email" id="subscribe-email" placeholder="E-mail" required>
+          <input class="subscribe-form__input" type="email" name="subscribe-email" id="subscribe-email" placeholder="E-mail" required>
         
-        <button class="button subscribe__button" type="submit">
+        <button class="button subscribe-form__button" type="submit">
           Subscribe
           <svg class="icon button__icon" width="24" height="24">
             <use xlink:href="images/sprite.svg#icon-leaf"></use>

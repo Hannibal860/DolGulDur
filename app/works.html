@@ -11,9 +11,7 @@
 <link rel="manifest" href="images/favicon/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -23,71 +21,70 @@
   <header class="header">
   <div class="header__container container">
 
-    <a class="logo" href="index.html">
-      <img class="logo__img" src="./images/icons/logo.svg" alt="logo" width="140" height="30">
-    </a>
-
-    <button class="mobile-menu__burger-button" type="button" data-menu-button>
-      <span class="sr-only">Open / close mobile menu</span>
-      <span class="mobile-menu__burger-line"></span>
-    </button>
-
-    <div class="mobile-menu" data-menu>
-      <ul class="mobile-menu__list">
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="index.html">
-            Home
-          </a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="works.html">
-            Our Works
-          </a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="">
-            Contacts
-          </a>
-        </li>
-      </ul>
-      <ul class="mobile-menu__contacts-list">
-        <li class="mobile-menu__contacts-item mobile-menu__contacts-item--tel">
-          <a class="mobile-menu__contacts-link" href="tel:+380961111111">
-            +38 096 111 11 11
-          </a>
-        </li>
-        <li class="mobile-menu__contacts-item mobile-menu__contacts-item--email">
-          <a class="mobile-menu__contacts-link" href="mailto:info@dolguldur.com">
-            info@dolguldur.com
-          </a>
-        </li>
-      </ul>
-      <ul class="mobile-menu__social-list">
-        <li class="mobile-menu__social-item">
-          <a class="mobile-menu__social-link" href="">
-            Instagram
-          </a>
-        </li>
-        <li class="mobile-menu__social-item">
-          <a class="mobile-menu__social-link" href="">
-            Twitter
-          </a>
-        </li>
-        <li class="mobile-menu__social-item">
-          <a class="mobile-menu__social-link" href="">
-            Facebook
-          </a>
-        </li>
-        <li class="mobile-menu__social-item">
-          <a class="mobile-menu__social-link" href="">
-            LinkedIn
-          </a>
-        </li>
-      </ul>
-
-    </div>
-
     <nav class="menu">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="./images/icons/logo.svg" alt="logo" width="140" height="30">
+      </a>
+
+      <button class="menu__burger-button" type="button" data-menu-button>
+        <span class="sr-only">Open / close mobile menu</span>
+        <span class="menu__burger-line"></span>
+      </button>
+
+      <div class="mobile-menu" data-menu>
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="index.html">
+              Home
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="works.html">
+              Our Works
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="">
+              Contacts
+            </a>
+          </li>
+        </ul>
+        <ul class="mobile-menu__contacts-list">
+          <li class="mobile-menu__contacts-item mobile-menu__contacts-item--tel">
+            <a class="mobile-menu__contacts-link" href="tel:+380961111111">
+              +38 096 111 11 11
+            </a>
+          </li>
+          <li class="mobile-menu__contacts-item mobile-menu__contacts-item--email">
+            <a class="mobile-menu__contacts-link" href="mailto:info@dolguldur.com">
+              info@dolguldur.com
+            </a>
+          </li>
+        </ul>
+        <ul class="mobile-menu__social-list">
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link" href="">
+              Instagram
+            </a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link" href="">
+              Twitter
+            </a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link" href="">
+              Facebook
+            </a>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a class="mobile-menu__social-link" href="">
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <ul class="menu__list">
         <li class="menu__item">
           <a class="menu__link " href="index.html">Home</a>
@@ -100,6 +97,7 @@
         </li>
       </ul>
     </nav>
+
     <ul class="user-contacts">
       <li class="user-contacts__item">
         <a class="user-contacts__link" href="mailto:info@gmail.com">
@@ -373,59 +371,61 @@
         join
       </span>
       <ul class="social social--dark">
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="sr-only">
-              go to DolGulDur studio's Instagram
-            </span>
-            <svg class="icon" width="20" height="20">
-              <use xlink:href="images/sprite.svg#icon-insta"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="sr-only">
-              go to Twitter
-            </span>
-            <svg class="icon" width="20" height="20">
-              <use xlink:href="images/sprite.svg#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="sr-only">
-              go to Facebook
-            </span>
-            <svg class="icon" width="20" height="20">
-              <use xlink:href="images/sprite.svg#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="sr-only">
-              go to Linkedin
-            </span>
-            <svg class="icon" width="20" height="20">
-              <use xlink:href="images/sprite.svg#icon-linkedin"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+  <li class="social__item">
+    <a class="social__link" href="">
+      <span class="sr-only">
+        go to  Instagram
+      </span>
+      <svg class="icon" width="20" height="20">
+        <use xlink:href="images/sprite.svg#icon-insta"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social__item">
+    <a class="social__link" href="">
+      <span class="sr-only">
+        go to  Twitter
+      </span>
+      <svg class="icon" width="20" height="20">
+        <use xlink:href="images/sprite.svg#icon-twitter"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social__item">
+    <a class="social__link" href="">
+      <span class="sr-only">
+        go to  Facebook
+      </span>
+      <svg class="icon" width="20" height="20">
+        <use xlink:href="images/sprite.svg#icon-facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social__item">
+    <a class="social__link" href="">
+      <span class="sr-only">
+        go to  Linkedin
+      </span>
+      <svg class="icon" width="20" height="20">
+        <use xlink:href="images/sprite.svg#icon-linkedin"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+
+
     </div>    
     <div class="footer__subscribe">
       <span class="footer__subtitle">
         subscribe
       </span>
-      <form class="subscribe__form">
+      <form class="subscribe-form">
         <label class="sr-only" for="subscribe-email">
           E-mail
         </label>
-          <input class="subscribe__input" type="email" name="subscribe-email" id="subscribe-email" placeholder="E-mail" required>
+          <input class="subscribe-form__input" type="email" name="subscribe-email" id="subscribe-email" placeholder="E-mail" required>
         
-        <button class="button subscribe__button" type="submit">
+        <button class="button subscribe-form__button" type="submit">
           Subscribe
           <svg class="icon button__icon" width="24" height="24">
             <use xlink:href="images/sprite.svg#icon-leaf"></use>

@@ -100,11 +100,11 @@
     }
   }
 
-  &__join {   
+  &__join {
     width: 100%;
     max-width: 450px;
     margin: 0 auto;
-    
+
     @media(min-width: 768px) {
       max-width: 206px;
     }
@@ -119,11 +119,12 @@
   }
 
   &__subscribe {
-    max-width: 570px;
+    max-width: 450px;
     width: 100%;
 
     @media (min-width: 1024px) {
       padding-top: 8px;
+      max-width: 570px;
     }
   }
 
@@ -136,21 +137,19 @@
   }
 }
 
-.subscribe {
-  &__form {
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-    justify-content: center;
-    gap: 24px;
-    align-items: center;
+.subscribe-form {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  align-items: center;
 
-    @media(min-width: 1200px) {
-      flex-direction: row;
-      margin: 0;
-      gap: 12px;
-      justify-content: space-between;
-    }
+  @media(min-width: 1200px) {
+    flex-direction: row;
+    margin: 0;
+    gap: 12px;
+    justify-content: space-between;
   }
 
   &__input {
