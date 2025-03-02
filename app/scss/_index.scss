@@ -37,6 +37,105 @@
       min-height: 600px;
       height: 55vh;
     }
+
+    &--face {
+      background-image: url('../images/hero/hero3-mob.jpg');
+
+      @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url('../images/hero/hero3-mob-2x.jpg');
+      }
+
+      @media (min-width: 768px) {
+        background-image: url('../images/hero/hero3-tab.jpg');
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url('../images/hero/hero3-tab-2x.jpg');
+        }
+      }
+
+      @media (min-width: 1200px) {
+        background-image: url('../images/hero/hero3.jpg');
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url('../images/hero/hero3-2x.jpg');
+        }
+      }
+    }
+
+    &--hands {
+      background-image: url('../images/hero/hero2-mob.jpg');
+
+      @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url('../images/hero/hero2-mob-2x.jpg');
+      }
+
+      @media (min-width: 768px) {
+        background-image: url('../images/hero/hero2-tab.jpg');
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url('../images/hero/hero2-tab-2x.jpg');
+        }
+      }
+
+      @media (min-width: 1200px) {
+        background-image: url('../images/hero/hero2.jpg');
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url('../images/hero/hero2-2x.jpg');
+        }
+      }
+    }
+
+    &--boy {
+      background-image: url('../images/hero/hero1-mob.jpg');
+
+      @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url('../images/hero/hero1-mob-2x.jpg');
+      }
+
+      @media (min-width: 768px) {
+        background-image: url('../images/hero/hero1-tab.jpg');
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url('../images/hero/hero1-tab-2x.jpg');
+        }
+      }
+
+      @media (min-width: 1200px) {
+        background-image: url('../images/hero/hero1.jpg');
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url('../images/hero/hero1-2x.jpg');
+        }
+      }
+    }
   }
 
   &__container {
@@ -258,7 +357,7 @@
   &__item {
     width: calc((100% - 1 * 30px) / 2);
 
-    @media(min-width: 768px) {      
+    @media(min-width: 768px) {
       width: calc((100% - 2 * 30px) / 3);
     }
 

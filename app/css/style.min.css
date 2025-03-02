@@ -495,7 +495,7 @@ body.lock {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 30px;
+    gap: 33px;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) and (orientation: landscape) {
@@ -508,7 +508,6 @@ body.lock {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 44px;
   }
 }
 @media (min-width: 768px) {
@@ -802,6 +801,13 @@ body.lock {
 }
 @media (min-width: 1200px) {
   .user-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 38px;
   }
 }
@@ -870,6 +876,90 @@ body.lock {
   .hero__background-item {
     min-height: 600px;
     height: 55vh;
+  }
+}
+.hero__background-item--face {
+  background-image: url("../images/hero/hero3-mob.jpg");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero__background-item--face {
+    background-image: url("../images/hero/hero3-mob-2x.jpg");
+  }
+}
+@media (min-width: 768px) {
+  .hero__background-item--face {
+    background-image: url("../images/hero/hero3-tab.jpg");
+  }
+}
+@media (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero__background-item--face {
+    background-image: url("../images/hero/hero3-tab-2x.jpg");
+  }
+}
+@media (min-width: 1200px) {
+  .hero__background-item--face {
+    background-image: url("../images/hero/hero3.jpg");
+  }
+}
+@media (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi), (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero__background-item--face {
+    background-image: url("../images/hero/hero3-2x.jpg");
+  }
+}
+.hero__background-item--hands {
+  background-image: url("../images/hero/hero2-mob.jpg");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero__background-item--hands {
+    background-image: url("../images/hero/hero2-mob-2x.jpg");
+  }
+}
+@media (min-width: 768px) {
+  .hero__background-item--hands {
+    background-image: url("../images/hero/hero2-tab.jpg");
+  }
+}
+@media (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero__background-item--hands {
+    background-image: url("../images/hero/hero2-tab-2x.jpg");
+  }
+}
+@media (min-width: 1200px) {
+  .hero__background-item--hands {
+    background-image: url("../images/hero/hero2.jpg");
+  }
+}
+@media (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi), (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero__background-item--hands {
+    background-image: url("../images/hero/hero2-2x.jpg");
+  }
+}
+.hero__background-item--boy {
+  background-image: url("../images/hero/hero1-mob.jpg");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero__background-item--boy {
+    background-image: url("../images/hero/hero1-mob-2x.jpg");
+  }
+}
+@media (min-width: 768px) {
+  .hero__background-item--boy {
+    background-image: url("../images/hero/hero1-tab.jpg");
+  }
+}
+@media (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero__background-item--boy {
+    background-image: url("../images/hero/hero1-tab-2x.jpg");
+  }
+}
+@media (min-width: 1200px) {
+  .hero__background-item--boy {
+    background-image: url("../images/hero/hero1.jpg");
+  }
+}
+@media (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi), (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero__background-item--boy {
+    background-image: url("../images/hero/hero1-2x.jpg");
   }
 }
 .hero__container {
@@ -1257,7 +1347,7 @@ body.lock {
 .order-form__input {
   display: block;
   width: 100%;
-  padding: 11px 12px 11px 31px;
+  padding: 11px 12px 11px 42px;
   margin-top: 4px;
   border-radius: 4px;
   outline: 1px solid rgba(117, 117, 117, 0.2);
@@ -1609,13 +1699,13 @@ body.lock {
 @media (min-width: 1024px) {
   .footer__subscribe {
     padding-top: 8px;
-    max-width: 570px;
-    margin: 0 24px;
+    margin: 0 84px;
   }
 }
 @media (min-width: 1200px) {
   .footer__subscribe {
     margin: 0;
+    max-width: 570px;
   }
 }
 .footer__subtitle {
@@ -1666,9 +1756,8 @@ body.lock {
   -webkit-transition: color 0.2s, outline 0.2s;
   transition: color 0.2s, outline 0.2s;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .subscribe-form__input {
-    min-width: 358px;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
