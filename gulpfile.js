@@ -9,6 +9,46 @@ const clean = require('gulp-clean');
 const rename = require('gulp-rename');
 const fileinclude = require('gulp-file-include');
 
+const gulp = require('gulp');
+const path = require('path');
+const htmlreplace = require('gulp-html-replace');
+const replace = require('gulp-replace');
+
+// clean build
+gulp.task('clean', () => {
+  return gulp.src('build', {read: false, allowEmpty: true})
+    .pipe(clean({force: true}));
+});
+
+//copy 
+gulp.task('copy',() => {
+  return gulp.src(['app/images/**/*', 'app/css/**/*', 'app/js/main.min.js', 'app/.htaccess', '!app/html/**/*'], {base: 'app'})
+  .pipe(gulp.dest('build'));
+});
+
+//replace html
+gulp.task('html', () => {
+  return gulp.src('app/**/*.html')
+    .pipe(replace('.html"', '"'))
+    .pipe(htmlreplace({
+      'removeHtmlExtension': {
+        src: '',
+        tpl: '<link rel="stylesheet" href="%s.css"><script src="%s.js"></script>'
+      }
+    }))
+    .pipe(gulp.dest('build'));
+});
+
+//delete html-folder
+gulp.task('cleanHtmlFromBuild', () => {
+  return gulp.src('build/html', { read: false, allowEmpty: true })
+    .pipe(clean({ force: true }));
+});
+
+gulp.task('build', gulp.series('clean', 'copy', 'html', 'cleanHtmlFromBuild'));
+gulp.task('default', gulp.series('build'));
+
+
 
 function scripts() {
   return src([

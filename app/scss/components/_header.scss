@@ -413,12 +413,12 @@
 
   @media (min-width: 1024px) {
     display: flex;
+    gap: 38px;
   }
 
   @media (min-width: 1200px) {
     display: flex;
     flex-direction: row;
-    gap: 38px;
   }
 
   &__link {
