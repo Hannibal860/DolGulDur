@@ -1,8 +1,8 @@
+const body = document.querySelector("body");
 (() => {
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
-  const body = document.querySelector("body");
-
+ 
   menuBtnRef.addEventListener("click", () => {
     const expanded =
       menuBtnRef.getAttribute("aria-expanded") === "true" || false;
@@ -19,7 +19,6 @@
 
 $(function () {
   var mixer = mixitup('.gallery__content-list');
-
 })
 
 
@@ -35,8 +34,6 @@ $('.hero__background').slick({
 });
 
 
-
-
 (() => {
   const refs = {
     openModalBtn: document.querySelector("[data-modal-open]"),
@@ -44,12 +41,17 @@ $('.hero__background').slick({
     modal: document.querySelector("[data-modal]"),
   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
 
-  function toggleModal() {
+  refs.openModalBtn.addEventListener("click", toggleModal);    
+  refs.closeModalBtn.addEventListener("click", toggleModal);  
+  
+  
+  function toggleModal(e) {  
+    
     refs.modal.classList.toggle("is-hidden");
+    body.classList.toggle("lock");
   }
+
 })();
 
 
